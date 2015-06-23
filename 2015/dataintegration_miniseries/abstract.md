@@ -1,10 +1,10 @@
-# Toolchains for integrating heterogenous algorithms and data: a anecdote 
+# Toolchains for integrating heterogenous algorithms and data: an anecdote 
 
 * Aaron Brooks
 * July 3, 2015
 * EMBL Heidelberg
 
-Integrating heterogenous data and combining . We recently published a system-level model for condition-specific gene regulation from high-troughput measurements of the trans in two prokaryotes.  In this talk I will through the lens . More than, I will try to how these tools can be leveraged to and reconcile  
+Integration of heterogenous data and algorithms is increasingly common in systems biology workflows. We recently developed a [system-level model for transcriptional control](http://egrin2.systemsbiology.net/) from high-troughput datasets for two prokaryotes. By combined several types of biological data,  and a multistep post-processing procedure into a single toolchain we were able to infer . In this talk I will through . Rather than, I will try to how these tools can be leveraged to and reconcile. In addition, I will highlight models with genome-scale models of metabolism. 
 
 
 
