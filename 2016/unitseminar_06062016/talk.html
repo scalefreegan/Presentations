@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>GB Unit Seminar</title>
+
+		<meta name="description" content="QGen: from yeast to man">
+		<meta name="author" content="Aaron Brooks">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/night.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<!-- #45462A #4A4E69 #5E4955-->
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h3>Deciphering complex phenotypes with
+							multiomic quantitative traits,
+							SCRaMbLEd genomes,
+							and longitudinal profiling</h3>
+					<p>
+ 						<a href="http://aaronbrooks.info">Aaron Brooks</a> /
+						<img height=40 align="middle"
+							style="background:0px;margin:0px 5px 5px 5px;border:0;box-shadow:0;vertical-align:middle"
+							data-src="src/TwitterLogo_white.png"><a href="http://twitter.com/scalefreegan">@scalefreegan</a>
+					</p>
+					<br>
+				</section>
+
+				<section
+					data-transition="fade"
+					data-background-video-loop
+					data-background-video="http://scalefreegan.github.io/nucleotides3.mp4"
+					data-background-color="white">
+					<img width="400px" class="fragment" src="src/vascular-1049535.jpg"></img>
+				</section>
+
+				<!-- <section
+					data-transition="none"
+					data-background-video-loop
+					data-background-video="http://scalefreegan.github.io/nucleotides3.mp4"
+					>
+					<img src="src/paul1_1.png" style="border:0px;box-shadow:0 0 0;margin:0 0"></img>
+				</section>
+
+				<section
+					data-transition="none"
+					data-background-video-loop
+					data-background-video="http://scalefreegan.github.io/nucleotides3.mp4">
+					<img src="src/paul1_2.png" style="border:0px;box-shadow:0 0 0;margin:0 0"></img>
+				</section>
+
+				<section
+					data-transition="none"
+					data-background-video-loop
+					data-background-video="http://scalefreegan.github.io/nucleotides3.mp4">
+					<img src="src/paul1_3.png" style="border:0px;box-shadow:0 0 0;margin:0 0"></img>
+				</section>
+
+				<section
+					data-transition="fade"
+					data-background-video-loop
+					data-background-video="http://scalefreegan.github.io/nucleotides3.mp4">
+					<img src="src/paul1_4.png" style="border:0px;box-shadow:0 0 0;margin:0 0"></img>
+				</section>
+
+				<section
+					data-transition="fade"
+					data-background-video-loop
+					data-background-video="http://scalefreegan.github.io/nucleotides3.mp4">
+					<img src="src/paul1_5.png" style="border:0px;box-shadow:0 0 0;margin:0 0"></img>
+				</section> -->
+
+				<section
+					data-transition="fade"
+					data-background-video-loop
+					data-background-video="http://scalefreegan.github.io/nucleotides3.mp4"
+					data-background-color="white">
+					<img src="src/paul1.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0"></img>
+				</section>
+
+				<section
+					data-transition="fade"
+					data-background-video-loop
+					data-background-video="http://scalefreegan.github.io/nucleotides3.mp4"
+					data-background-color="white">
+					<h2 class="fragment" style="background-color:#444444;border-radius: 15px;">&nbsp;Dynamic&nbsp;</h2>
+					<br>
+					<h2 class="fragment" style="background-color:#444444;border-radius: 15px;">&nbsp;Environment-dependent&nbsp;</h2>
+				</section>
+
+				<section
+					data-background="src/intro-01.png"
+					data-background-size="contain"
+					data-background-color="white">
+					<!-- <img src="src/intro-01.png"></img> -->
+				</section>
+
+				<section id="into" data-background-color="white">
+					<h2 style="color:black">Three vignettes</h2>
+					<br>
+					<ul>
+						<li class="fragment" style="color:black">
+							Multiomic QTLs&nbsp;&nbsp;
+							<span style="color:#EEE;background-color:#45462A;float:right;border-radius: 15px;"> &nbsp;Yeast&nbsp; </span></li>
+						<br>
+						<li class="fragment" style="color:black">
+							SCRaMbLEd genomes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<span style="color:#EEE;background-color:#4A4E69;float:right;border-radius: 15px;"> &nbsp;Synthetic Yeast&nbsp; </span> </li>
+						<br>
+						<li class="fragment" style="color:black">
+							Longitudinal profiling with wearables&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<span style="color:#EEE;background-color:#5E4955;float:right;border-radius: 15px;"> &nbsp;Humans&nbsp; </span></li>
+					</ul>
+				</section>
+
+				<section id="genphen">
+					<section
+						data-background="src/Yeast-Cell.jpg"
+						data-background-size="contain">
+						<h2 style="color:#EEE;background-color:#45462A;border-radius: 15px;"> &nbsp;Multiomic QTLs&nbsp; </h2>
+					</section>
+					<section
+						data-background-color="#FFFFFF">
+						<img width="100%" src="src/nrg3891-f1_1.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+						<p><small>
+							<a href="http://www.nature.com/nrg/journal/v16/n4/full/nrg3891.html">Albert and Kruglyak 2015</a>
+						</small></p>
+					</section>
+					<section
+						data-background-color="#FFFFFF">
+						<img width="100%" src="src/nrg3891-f1_2.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+						<p><small>
+							<a href="http://www.nature.com/nrg/journal/v16/n4/full/nrg3891.html">Albert and Kruglyak 2015</a>
+						</small></p>
+					</section>
+					<section
+						data-background-color="#FFFFFF">
+						<img width="100%" src="src/nrg3868-f1.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+						<p><small>
+							<a href="http://www.nature.com/nrg/journal/v16/n2/abs/nrg3868.html">Ritchie et al. 2015</a>
+						</small></p>
+					</section>
+					<section
+						data-background-color="#FFFFFF">
+						<img width="100%" src="src/nrg3891-f1_3.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+						<p><small>
+							<a href="http://www.nature.com/nrg/journal/v16/n4/full/nrg3891.html">Albert and Kruglyak 2015</a>
+						</small></p>
+					</section>
+					<section>
+						<h2>A visual introduction to quantitative trait loci (QTL)</h2>
+					</section>
+					<section data-background-color="#EEE">
+						<iframe src="basicqtl.html" width="1200" height="800" frameBorder="0"></iframe>
+					</section>
+					<section>
+						<h2>QTLs can be defined for <i>dynamic</i> (function-valued) traits</h2>
+					</section>
+					<section data-background-color="#EEE">
+						<iframe src="qtldyn.html" width="1200" height="800" frameBorder="0"></iframe>
+					</section>
+					<section
+							data-transition="fade"
+							data-background-color="#FFFFFF">
+							<img width="100%" src="src/g2p_blackbox.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section
+							data-transition="fade"
+							data-background-color="#FFFFFF">
+							<img width="100%" src="src/g2p_blackbox_2.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+
+					<section
+							data-background-color="#FFFFFF">
+							<img width="90%" src="src/abrooks_talk.003.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p style="color:black;margin:0 0">
+								<small>60,000 SNPs and approximately 6,000 indels in
+									YJM789 with respect to the reference S288c genome
+								</small>
+							</p>
+					</section>
+					<section
+							data-background="src/method_genphen-01.png"
+							data-background-size="contain"
+							data-background-color="#FFFFFF">
+					</section>
+					<section
+							data-background="src/method_genphen2-01.png"
+							data-background-size="contain"
+							data-background-color="#FFFFFF">
+					</section>
+					<section
+							data-transition="fade"
+							data-background-color="#FFFFFF">
+							<img width="100%" src="src/g2p_multiomic_2.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section
+							data-background-color="#FFFFFF">
+						<h4 style="color:black">Discovering Causal Pathways That Mediate Genetic Effects on Phenotype</h4>
+						<img width="100%" src="src/figure1.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+						<p><small>
+							<a href="http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1003803">Gagneur et al 2013</a>
+						</small></p>
+					</section>
+					<section
+						data-background="src/metabolic_network_small.png"
+						data-background-size="contain"
+						data-background-color="#FFFFFF">
+					</section>
+					<section
+							data-background-color="#FFFFFF">
+							<img width="650px" src="src/parental_cycle-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p class="fragment" style="color:black;margin:0 0"><u>16</u> out of 26 metabolites different in parental strains</p>
+					</section>
+					<section
+							data-background-color="#FFFFFF">
+							<h4 style="color:black"><u>26</u> metabolites measured in <u>104</u> strains at <u>4</u> timepoints in exponential growth</h4>
+							<img width="90%" src="src/metabolome_strains.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section>
+						<h3><a>Similar fraction of mQTLs and eQTLs per trait</a></h3>
+						<br>
+						<br>
+						<h4><u>3,068</u> (626 <i>cis</i>) eQTLs from 5,147 annotated ORFs</h4>
+						<h4><u>>400</u> pQTLs from ~2,117 proteins*</h4>
+						<h4><u>10</u> mQTLs from 26 metabolites</h4>
+						<br>
+						<br>
+						<p><small>FDR 0.1</small></p>
+						<p><small>*Chenchen Zhu</small></p>
+					</section>
+					<!-- <section
+							data-background-color="#FFFFFF">
+							<h4 style="color:black">Are fewer than expected eQTL/mQTL overlaps a result of phenotypic buffering?</h4>
+							<img width="90%" src="src/F1.large.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://science.sciencemag.org/content/347/6222/664.long">Battle et al 2015</a>
+							</small></p>
+					</section> -->
+					<section
+							data-transition="fade"
+							data-background-color="#FFFFFF">
+							<img width="650px" src="src/mQTL_heatmap-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p style="color:black;margin:0 0">mQTL hotspot on Chr13</p>
+					</section>
+					<section
+							data-transition="fade"
+							data-background-color="#FFFFFF">
+							<img width="650px" src="src/mQTL_heatmap_highp-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p style="color:black;margin:0 0">High condfidence QTLs: -3 <= LOD >= 3</p>
+					</section>
+
+					<section data-background-color="#EEE">
+						<iframe src="http://steinmetzlab.embl.de/shiny/mQTL/" width="1200" height="800" frameBorder="0"></iframe>
+					</section>
+					<section
+							data-background-color="#FFFFFF">
+							<h4 style="color:black"><i>Bul2</i> is a ubiquitin-ligase involved in membrane trafficking
+								of the general amino acid permease (Gap1p)</h4>
+							<img width="800px" src="src/F13.large.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://www.molbiolcell.org/content/17/7/3031">Rubio-Texeira and Kaiser 2006</a>
+							</small></p>
+					</section>
+					<section
+							data-background-color="#FFFFFF">
+							<h4 style="color:black"><i>Bul2</i> has been associated with misregulation of amino acid import</h4>
+							<img width="1600px" src="src/bul2.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1002250">Kwan et al 2011</a>
+							</small></p>
+					</section>
+					<section
+						data-background="src/donald.gif">
+					</section>
+					<section
+							data-background-color="#FFFFFF">
+							<h4 style="color:black">Metabolite levels conditioned on <i>Bul2</i> L883F (T2647C) substitution</h4>
+							<img width="90%" src="src/mlevels_qtl.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section
+							data-background-color="#FFFFFF">
+						<img width="100%" src="src/eQTL.gif" style="border:0px;box-shadow:0 0 0;margin:0 0">
+						<p class="fragment" style="color:black">Genes with strong trans-Chr13 eQTL function in amino acid biosynthetic processes (pval = 7.7 e-3)</p>
+					</section>
+					<section
+							data-background-color="#FFFFFF">
+						<img width="100%" src="src/aa_transcriptlevels.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section
+							data-background-color="#FFFFFF">
+						<p style="color:black">Specific connection to glutamine metabolism (pval = 0.013)</p>
+						<img width="100%" src="src/gln_transcriptlevels.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section>
+						<h3>Systematic way to model the indirect consequences of genetic variation using <i>trans</i>-eQTLs?</h3>
+					</section>
+				</section>
+
+				<section id="synyeast">
+					<section
+						data-background="src/Yeast-Cell.jpg"
+						data-background-size="contain">
+						<h2 style="color:#EEE;background-color:#4A4E69;border-radius: 15px;"> &nbsp;SCRaMbLEd genomes&nbsp; </h2>
+					</section>
+					<section
+							data-background="src/synyeast_twopanel-01.png"
+							data-background-size="contain"
+							data-background-color="#FFFFFF">
+					</section>
+					<section
+							data-background-color="#FFFFFF">
+							<img width="65%" src="src/F3.large-01.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://science.sciencemag.org/content/343/6178/1426.full">Pennisi et al 2014</a>
+							</small></p>
+					</section>
+					<section
+							data-background-color="#FFFFFF">
+							<img width="80%" src="src/F3.large-02.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://science.sciencemag.org/content/343/6178/1426.full">Pennisi et al 2014</a>
+							</small></p>
+					</section>
+					<section
+							data-background-color="#FFFFFF">
+							<img width="100%" src="src/synyeast_twopanel-02.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p style="color:black;margin:0 0"><u>S</u>ynthetic <u>C</u>hromosome <u>R</u>ecombination
+								<u>a</u>nd <u>M</u>odification <u>b</u>y <u>L</u>oxP-mediated <u>E</u>volution (SCRaMbLE)</p>
+					</section>
+					<section
+							data-background-color="#FFFFFF">
+							<h4 style="color:black">Can transcript isoforms explain SCRaMbLE phenotypes?</h4>
+							<img width="100%" src="src/TIFSeq-1024x650.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://pelechanolab.com/title/">Pelechano Lab</a>
+							</small></p>
+					</section>
+					<section
+							data-background-color="#FFFFFF">
+							<h4 style="color:black">Short reads cannot always reassemble SCRaMbLEd genomes</h4>
+							<img width="65%" src="src/scramble.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://genome.cshlp.org/content/26/1/36.long">Shen et al. 2016</a>
+							</small></p>
+					</section>
+					<section
+							data-background-color="#FFFFFF">
+							<h4 style="color:black">Long-read sequencing to reassemble SCRaMbLEd genomes</h4>
+							<img width="47%" src="src/JS94_all_reads_transparent.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<img width="47%" src="src/JS94_SynIXR_only_transparent.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p style="color:black">JS94 SynIXR (un)SCRaMbLEd  sequence: <b>91,010 bp</b></p>
+							<p class="fragment" style="color:orange"><b>PacBio:</b> 99% identity, contig size of: <b><u>86,574 bp</u></b></p>
+							<p class="fragment" style="color:red"><b>MinION:</b> 98% identity, contig size: <b><u>89,292 bp</u></b></p>
+							<br>
+							<p style="color:black"><small>Andreas Johansson, Jonathon Blake, Luke Tallon and Felix Wertek</small></p>
+					</section>
+				</section>
+
+				<section id="human">
+					<section
+						data-background="src/crowd.jpg"
+						data-background-size="contain">
+						<h2 style="color:#EEE;background-color:#5E4955;border-radius: 15px;">
+							&nbsp;Longitudinal profiling with wearable technologies&nbsp; </h2>
+					</section>
+					<section
+							data-background="src/projectsummary_full-01.png"
+							data-background-size="contain"
+							data-background-color="#FFFFFF">
+					</section>
+					<section
+							data-background-color="#FFFFFF">
+							<img width="90%" src="src/msb166873-fig-0001.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://msb.embopress.org/content/12/4/867.long">Steinmetz and Jones (2016)</a>
+							</small></p>
+					</section>
+					<section
+						data-background-color="#FFFFFF">
+						<a href="http://biobank.ctsu.ox.ac.uk/crystal/">
+							<img width="90%" src="src/biobank-or8.png" style="border:0px;box-shadow:0 0 0;margin:0 0 75px 0">
+						</a>
+						<br>
+						<ul style="color:black">
+							<li><u><b>500,000 people</b></u>, 40-69 years old in 2006-2010</li>
+							<br>
+							<li>Many phenotypes including physical exam, nutrition, blood, urine, saliva</li>
+							<br>
+							<li><u>Activity monitor for 20,000 (100,000 by Q1 2016)</u></li>
+						</ul>
+					</section>
+					<section
+							data-background="src/hr_lars.png"
+							data-background-size="contain"
+							data-background-color="#FFFFFF">
+					</section>
+					<section
+							data-background="src/run_both_1.png"
+							data-background-size="contain"
+							data-background-color="#FFFFFF">
+					</section>
+					<!-- <section
+							data-background="src/run_both_2.png"
+							data-background-size="contain"
+							data-background-color="#FFFFFF">
+					</section>
+					<section
+							data-background="src/run_both_3.png"
+							data-background-size="contain"
+							data-background-color="#FFFFFF">
+					</section> -->
+					<section
+							data-background-color="#FFFFFF">
+							<img width="90%" src="src/msb166873-fig-0001.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://msb.embopress.org/content/12/4/867.long">Steinmetz and Jones (2016)</a>
+							</small></p>
+					</section>
+					<section
+							data-background-video="http://scalefreegan.github.io/ionicear.mp4"
+							data-background-size="contain">
+					</section>
+					<section
+							data-background="src/projectsummary_full-01.png"
+							data-background-size="contain"
+							data-background-color="#FFFFFF">
+					</section>
+					<section
+							data-background="src/projectsummary_full_dog-01.png"
+							data-background-size="contain"
+							data-background-color="#FFFFFF">
+					</section>
+					<section
+							data-background-color="#FFFFFF">
+							<img width="75%" src="src/dog.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://www.today.com/video/doggie-dna-home-tests-could-help-you-determine-breed-695410243621">TODAY Show</a>
+							</small></p>
+					</section>
+					<section
+						data-transition="fade"
+						data-background-video="http://scalefreegan.github.io/dogs1.mp4"
+						data-background-color="black">
+					</section>
+
+					<section
+						data-transition="fade"
+						data-background-video="http://scalefreegan.github.io/dogs2.mp4"
+						data-background-color="black">
+					</section>
+				</section>
+				<section id="thanks"
+					data-background="src/thankyou.png"
+					data-background-size="contain">
+				</section>
+
+
+
+
+			</div>
+		</div>
+
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				// transitionSpeed: 'slow',
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'reveal/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
