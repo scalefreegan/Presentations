@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Transcript-level quantification</title>
+
+		<meta name="description" content="Transcript-level quantification">
+		<meta name="author" content="Aaron Brooks">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/night.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<!-- #45462A #4A4E69 #5E4955-->
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h3>Transcript-level quantification</h3>
+					<p>
+ 						<a href="http://aaronbrooks.info">Aaron Brooks</a> /
+						<img height=40 align="middle"
+							style="background:0px;margin:0px 5px 5px 5px;border:0;box-shadow:0;vertical-align:middle"
+							data-src="src/TwitterLogo_white.png"><a href="http://twitter.com/scalefreegan">@scalefreegan</a>
+					</p>
+					<p>
+						<small>Follow along on  <img height=40 align="middle" style="background:0px;margin:0px 5px 5px 5px;border:0;box-shadow:0;vertical-align:middle" data-src="src/GitHub-Mark/PNG/GitHub-Mark-Light-64px.png"></small>
+						<br>
+						<small><a href="http://scalefreegan.github.io/Presentations/2016/frigroupmtg_150916/talk.html">http://scalefreegan.github.io/Presentations/2016/frigroupmtg_150916/talk.html</a></small>
+					</p>
+				</section>
+				<section
+						data-background-color="#FFFFFF">
+						<h3 style="color:#000000">Different strokes for different folks</h3>
+						<img width="100%" src="src/huber3.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+				</section>
+				<section
+						data-background-color="#FFFFFF">
+						<h3 style="color:#000000">Different strokes for different folks</h3>
+						<img width="100%" src="src/huber.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+				</section>
+				<section
+						data-background-color="#FFFFFF">
+						<p style="color:#000000">"We show that methods providing the best absolute quantification do not necessarily provide good relative quantification across samples,
+							that count-based methods are superior for gene-level relative quantification, <b>and that the new generation of pseudo-alignment-based software performs as well as
+							established methods, at a fraction of the computing time.</b>"</p>
+						<p><small>
+							<a href="http://nar.oxfordjournals.org/content/44/11/5054">Germain et al. (2016) <b>RNAontheBENCH: computational and empirical resources for benchmarking
+								RNAseq quantification and differential expression methods</b></a>
+						</small></p>
+				</section>
+				<section
+						data-background-color="#FFFFFF">
+						<img width="90%" src="src/traditional_workflow.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+						<p><small>
+							<a href="https://www.bioconductor.org/help/course-materials/2016/CSAMA/lect-07-modern-rnaseq/ModernRNAseqAnalysis.pdf">Charlotte Soneson - University of Zurich</a>
+						</small></p>
+				</section>
+				<section
+						data-background-color="#FFFFFF">
+						<h3 style="color:#000000">In the year 2013...a new species...</h3>
+						<img width="100%" src="src/sailfish_logo.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+						<p><small>
+							<a href="http://www.cs.cmu.edu/~ckingsf/software/sailfish/">Sailfish: Rapid Alignment-free Quantification of Isoform Abundance</a>
+						</small></p>
+				</section>
+				<section
+						data-background-color="#FFFFFF">
+						<p style="color:#000000">"...the fact that simpler was so much faster led us to wonder whether the prevailing wisdom of seeking to improve RNA-Seq analysis by looking at increasingly
+							complex models was ill-founded. Perhaps simpler could be not only fast, but also accurate, or at least close enough to best-in-class for practical purposes"</p>
+						<p style="color:#000000">
+							<a href="https://liorpachter.wordpress.com/2015/05/10/near-optimal-rna-seq-quantification-with-kallisto/#comment-7341">Lior Pachter on motivation for kallisto</a>
+						</p>
+				</section>
+				<section
+						data-background-color="#FFFFFF">
+						<img width="90%" src="src/traditional_workflow_2.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+						<p><small>
+							<a href="https://www.bioconductor.org/help/course-materials/2016/CSAMA/lect-07-modern-rnaseq/ModernRNAseqAnalysis.pdf">Charlotte Soneson - University of Zurich</a>
+						</small></p>
+				</section>
+				<section
+						data-background-color="#FFFFFF">
+						<img width="100%" src="src/nbt.3682-F1_1.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+						<p><small>
+							<a href="http://www.nature.com/nbt/journal/vaop/ncurrent/full/nbt.3682.html">Michael Love - alpine</a>
+						</small></p>
+				</section>
+				<section
+						data-background-color="#FFFFFF">
+						<img width="100%" src="src/nbt.3682-F1_2.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+						<p><small>
+							<a href="http://www.nature.com/nbt/journal/vaop/ncurrent/full/nbt.3682.html">Michael Love - alpine</a>
+						</small></p>
+				</section>
+				<section
+						data-background-color="#FFFFFF">
+						<img width="75%" src="src/modern_workflow.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+						<p style="color:#000000"><small>"The basic idea was to determine, for each read, not where in each transcript it aligns, but rather which transcripts it is compatible with."
+							<a href="https://liorpachter.wordpress.com/2015/05/10/near-optimal-rna-seq-quantification-with-kallisto/#comment-7341">Lior Pachter<a></small></p>
+						</small></p>
+						<p><small>
+							<a href="https://www.bioconductor.org/help/course-materials/2016/CSAMA/lect-07-modern-rnaseq/ModernRNAseqAnalysis.pdf">Charlotte Soneson - University of Zurich</a>
+						</small></p>
+				</section>
+				<section
+						data-background-color="#FFFFFF">
+						<img width="70%" src="src/salmonworkflow.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+						<p><small>
+							<a href="http://biorxiv.org/content/early/2016/08/30/021592">Patro et al 2016</a>
+						</small></p>
+				</section>
+				<section
+						data-background-color="#FFFFFF">
+						<h3 style="color:#000000">Easy to run</h3>
+						<img width="100%" src="src/salmonrun.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+				</section>
+				<section
+						data-background-color="#FFFFFF">
+						<img width="70%" src="src/salmonworkflow.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+						<p><small>
+							<a href="http://biorxiv.org/content/early/2016/08/30/021592">Patro et al 2016</a>
+						</small></p>
+				</section>
+				<section
+						data-background-color="#FFFFFF">
+						<img width="100%" src="src/mapping.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+						<p><small>
+							<a href="https://www.bioconductor.org/help/course-materials/2016/CSAMA/lect-07-modern-rnaseq/ModernRNAseqAnalysis.pdf">Charlotte Soneson - University of Zurich</a>
+						</small></p>
+				</section>
+				<section
+						data-background-color="#FFFFFF">
+						<img width="100%" src="src/estimation.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+						<p><small>
+							<a href="https://www.bioconductor.org/help/course-materials/2016/CSAMA/lect-07-modern-rnaseq/ModernRNAseqAnalysis.pdf">Charlotte Soneson - University of Zurich</a>
+						</small></p>
+				</section>
+				<section
+						data-background-color="#FFFFFF">
+						<h4 style="color:black">Gene-level quantification accuracy</h4>
+						<img width="75%" src="src/gene_correlation_full2.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+						<p><small>
+							<a href="https://cgatoxford.wordpress.com/2016/08/17/why-you-should-stop-using-featurecounts-htseq-or-cufflinks2-and-start-using-kallisto-salmon-or-sailfish/">Tom Smith - CGAT Blog</a>
+						</small></p>
+						<aside class="notes">
+							Since differential expression analyses are relative, the underestimation by featureCounts need not be a problem so long as it is consistent between samples as we
+							might expect given the fraction of unique sequence for a given gene is obviously invariant. With this in mind, to assess the accuracy of quantification,
+							I calculated the spearman’s rank correlation coefficient (Spearman’s rho) for each transcript or gene over the 100 simulations. Figure 6 shows the distribution
+							of Spearman’s rho values across bins of genes by fraction unique sequence. As expected, the accuracy of all methods is highest for genes with a greater proportion
+							of unique sequence. Strikingly, the alignment-independent methods outperform the alignment-dependent methods for genes with <80% unique sequence (11 % of genes).
+							At the extreme end of the scale, for genes with 1-2% unique sequence, median spearman’s rho values for the alignment-independent methods are 0.93-0.94,  compared
+							to 0.7-0.78 for the alignment-dependent methods. There was no consistent difference between featureCounts and gtf2table, however gtf2table tended to show a
+							slightly higher correlation for more unique genes. There was no detectable difference between the three alignment-free method.
+							Figure 6. Spearman’s correlation Rho for genes binned by sequence uniqueness as represented by fraction unique kmers (31mers).
+							Boxes show inter-quartile range (IQR), with median as black line. Notches represent confidence interval around median (+/- 1.57 x IQR/sqrt(n)).
+							Whiskers represent +/- 1.5 * IQR from box. Alignment-independent tools are indistinguishable and more accurate than alignment-dependent workflows.
+							featureCounts and gtf2table do not show consistent differences. All methods show higher accuracy with greater fraction unique sequence
+		    		</aside>
+				</section>
+				<section
+						data-background-color="#FFFFFF">
+						<h4 style="color:black">Transcript-level quantification accuracy</h4>
+						<img width="75%" src="src/transcript_correlation_full1.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+						<p><small>
+							<a href="https://cgatoxford.wordpress.com/2016/08/17/why-you-should-stop-using-featurecounts-htseq-or-cufflinks2-and-start-using-kallisto-salmon-or-sailfish/">Tom Smith - CGAT Blog</a>
+						</small></p>
+						<aside class="notes">
+							Figure 8 shows the same boxplot representation as Figure 6 but for transcript-level qantification. This time only salmon is shown for the alignment-independent
+							methods as kallisto and sailfish were again near identical to salmon. For the alignment-dependent methods, cufflinks2 and gtf2table are shown.
+							Again, the alignment-independent methods are clearly more accurate for transcripts with <80% unique sequence (96% of transcripts), and more unique
+							transcripts were more accurately quantified with alignment-independent tools or gtf2table. Oddly, cufflinks2 does not show a monotonic relationship
+							between transcript uniqueness and quantification accuracy, although the most accurately quantified transcripts were those with 90-100% unique sequence.
+							gtf2table is less accurate than cufflinks2 for transcripts with <15% unique sequence but as transcript uniqueness increases beyond 20%, gtf2table quickly
+							begins to outperforms cufflinks2, with medium spearman’s rho >0.98 for transcripts with 70-80% unique sequence compared to 0.61 for cufflink2.
+							Figure 8. Spearman’s correlation Rho for transcripts binned by sequence uniqueness as represented by fraction unique kmers (31mers).
+							Boxes show inter-quartile range (IQR), with median as black line. Notches represent confidence interval around median (+/- 1.57 x IQR/sqrt(n)).
+							Whiskers represent +/- 1.5 * IQR from box. Alignment-independent tools are indistinguishable (only salmon shown) and more accurate than
+							alignment-dependent workflows. gtf2table is more accurate than cufflinks for transcripts with >20% unique sequence. Alignment-independent
+							methods and gtf2table show higher accuracy with greater fraction unique sequence. Cufflinks does not show a monotonic relationship between
+							fraction unique kmers bin and median correlation coefficient.
+						</aside>
+				</section>
+				<section
+						data-background-color="#FFFFFF">
+						<h4 style="color:black">Mis-quantification of spcies absent from simulation</h4>
+						<img width="100%" src="src/expression_of_all_genes2.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+						<p><small>
+							<a href="https://cgatoxford.wordpress.com/2016/08/17/why-you-should-stop-using-featurecounts-htseq-or-cufflinks2-and-start-using-kallisto-salmon-or-sailfish/">Tom Smith - CGAT Blog</a>
+						</small></p>
+						<aside class="notes">
+							To test this I re-ran the RNA-Seq sample simulations but this time reads were only generated for 5592/19947 (28%) of the transcripts included in the reference genome;
+							78% of the transcripts were truly unexpressed. The figure below shows the average expression estimate over the 100 simulations for the 14354 transcripts from which
+							zero reads were simulated (“Absent”) and the 5592 “Present” transcripts. Ideally, all the abscent transcripts should have expression values of zero or close to zero.
+							Where the expression is above zero, the implication is that the isoform deconvolution/expression estimation step has essentially miss-assigned expression from an
+							expression transcript to an unexpressed transcripts. There are a number of observations from the figure. The first is that some absent transcripts can show
+							expression values on the same order of magnitude to the present transcripts, regardless of the quantification tool used, although the vast majority do show
+							zero or near-zero expression. Within the three alignment-independent tools, kallisto and sailfish are notably more likely to assign truly unexpressed
+							transcripts non-zero expression estimates, compared to salmon, even when the transcript sequence contains a high proportion of unique kmers. On the other hand,
+							cufflinks2 performs very poorly for transcripts with little unique sequence but similarly to salmon as the uniqueness of the transcript increases. This clearly
+							deserves some further investigation in a separate post…
+							Average expression estimates for transcripts which are known to be absent or present in the simulation.
+							Fraction unique kmers (31-mers) is used to classify the “uniqueness” of the transcript sequence. Note that cufflinks2 systematically underestimates
+							the expression of many transcripts, partly due to overestimation of the expression of “absent” transcripts.
+							The simulated RNA-Seq reads included random errors to simulate sequencing errors and reads were simulated from pre-mRNA at 1% of the depth of the
+							respective mRNA to simulate the presence of immature transcripts. No attempt was made to simulate biases such as library preparation fragmentation bias,
+							random hexmer priming bias, three-prime bias or biases from sequencing. This purpose of this simulation was to compare the best possible accuracy achievable
+							for each workflow under near-perfect conditions without going down the rabbit hole of correctlysimulating these biases.
+						</aside>
+				</section>
+				<section
+						data-background-color="#FFFFFF">
+						<img width="80%" src="src/workflow.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+						<p><small>
+							<a href="http://combine-lab.github.io/">Salmon and Wasabi: Rob Patro, COMBINE-Lab</a>
+						</small><br>
+						<small>
+							<a href="http://pachterlab.github.io/sleuth/">Sleuth: Pachter lab</a>
+						</small></p>
+				</section>
+				<section
+						data-background-color="#FFFFFF">
+						<h3 style="color:black">Shiny sleuth</h3>
+						<img width="100%" src="src/sleuth_1.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+				</section>
+				<section
+						data-background-color="#FFFFFF">
+						<h3 style="color:black">Shiny sleuth</h3>
+						<img width="100%" src="src/sleuth_2.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+				</section>
+				<section
+						data-background-color="#FFFFFF">
+						<p style="color:#000000">"This approach allows Salmon to acheive high accuracy while
+							 maintaining a speed similar to that of kallisto [10]. For example, <b>Salmon can quantify a data set
+							 of approximately 600 million reads (75bp, paired-end) in 23 minutes using 30 threads</b> — this
+							 roughly matches the speed of the recently-introduced kallisto, which took 20 minutes to complete
+							 the same task (wall clock time on a 24 core (with hyperthreading) machine with 256Gb of RAM."</p>
+						<p style="color:#000000">
+							<a href="http://biorxiv.org/content/early/2016/08/30/021592">Patro et al 2016</a>
+						</p>
+				</section>
+				<section data-background-color="white">
+					<h3 style="color:black">Learn more!</h3>
+					<br>
+					<ul>
+						<small>
+						<li style="color:black">
+							<b>Salmon provides accurate, fast, and bias-aware transcript expression estimates using dual-phase inference</b><br>
+							Rob Patro, Geet Duggal, Michael I Love, Rafael A Irizarry, Carl Kingsford<br>
+							bioRxiv 021592; doi: <a href="http://dx.doi.org/10.1101/021592">http://dx.doi.org/10.1101/021592</a>
+						</li>
+						<br>
+						<li style="color:black">
+							<b>Near-optimal probabilistic RNA-seq quantification</b><br>
+							Nicolas L Bray,	Harold Pimentel, Páll Melsted, Lior Pachter<br>
+							Nature Biotechnology 34, 525–527 (2016) <a href="http://dx.doi.org/10.1038/nbt.3519">http://dx.doi.org/10.1038/nbt.3519</a>
+						</li>
+						<br>
+						<li style="color:black">
+							<b>Modeling of RNA-seq fragment sequence bias reduces systematic errors in transcript abundance estimation</b><br>
+							Michael I Love,	John B Hogenesch, Rafael A Irizarry<br>
+							Nature Biotechnology (2016) doi: <a href="http://dx.doi.org/10.1038/nbt.3682">http://dx.doi.org/10.1038/nbt.3682</a>
+						</li>
+						</small>
+					</ul>
+				</section>
+				<section
+						data-background-color="#FFFFFF">
+						<p style="color:#000000">"As someone who has worked on RNA-Seq since the time of 32bp reads, I have to say that kallisto has personally been extremely liberating.
+							It offers freedom from the bioinformatics core facility, freedom from the cloud, freedom from the multi-core server, and in my case freedom from my graduate students–
+							for the first time in years I’m analyzing tons of data on my own; because of the simplicity and speed I find I have the time for it. Enjoy!"</p>
+						<p style="color:#000000">
+							<a href="https://liorpachter.wordpress.com/2015/05/10/near-optimal-rna-seq-quantification-with-kallisto/#comment-7341">Lior Pachter on kallisto</a>
+						</p>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				// transitionSpeed: 'slow',
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'reveal/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
