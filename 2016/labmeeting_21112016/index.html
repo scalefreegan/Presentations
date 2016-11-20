@@ -1,0 +1,401 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Lab meeting: 21.11.2016</title>
+
+		<meta name="description" content="Steinmetz Lab Meeting 2016<">
+		<meta name="author" content="Aaron Brooks">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/embl.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-color="#2A292D" id="slide1">
+					<h3 style="color:white">Gene expression from a SCRaMbLEd genome</h3>
+					<p style="color:white">
+ 						<a href="http://aaronbrooks.info">Aaron Brooks</a> /
+						<img height=40 align="middle"
+							style="background:0px;margin:0px 5px 5px 5px;border:0;box-shadow:0;vertical-align:middle"
+							data-src="src/TwitterLogo_white.png"><a href="http://twitter.com/scalefreegan">@scalefreegan</a>
+					</p>
+					<p style="color:white">
+						<small>Follow along on  <img height=40 align="middle" style="background:0px;margin:0px 5px 5px 5px;border:0;box-shadow:0;vertical-align:middle" data-src="src/GitHub-Mark/PNG/GitHub-Mark-Light-64px.png"></small>
+						<br>
+						<small><a href="http://bit.ly/2dL9OJU">bit.ly/2dL9OJU</a></small>
+					</p>
+				</section>
+				<section class="intro">
+					<section
+						data-background="src/Yeast-Cell.jpg"
+						data-background-size="contain"
+						data-background-color="#2A292D"
+						id="slide2">
+						<h3 style="color:#EEE;background-color:#007C80;border-radius: 15px;"> &nbsp;Why are genomes organized as we observe them?&nbsp; </h3>
+					</section>
+					<section id="slide3">
+							<h3 >Genetic synteny is conserved across closely related yeast species</h3>
+							<img width="100%" src="src/kellis_2003_fig1.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://www.nature.com/nature/journal/v423/n6937/full/nature01644.html">Kellis et al 2003</a>
+							</small></p>
+							<aside class="notes">
+								Figure 1: Aligned ORFs across four species. A 50-kb segment of S. cerevisiae chromosome VII
+								aligned with orthologous contigs from each of the other three species.
+								Predicted ORFs are shown as arrows pointing in the direction of transcription.
+								Orthologous ORFs are connected by dotted lines and are coloured by the type of
+								correspondence: red for 1-to-1 matches, blue for 1-to-2 matches and white for
+								unmatched ORFs. Sequence gaps are indicated by vertical lines at the ends of contigs,
+								with the estimated size of each gap shown by the length of the hook.
+							</aside>
+					</section>
+					<section id="slide4">
+							<h3 >Genetic synteny decreases with evolutionary distance</h3>
+							<img width="100%" src="src/dujon_2003_mod-01.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://www.nature.com/nature/journal/v430/n6995/full/nature02579.html#B14">Dujon et al 2004</a>
+							</small></p>
+							<aside class="notes">
+								Chromosomal blocks containing at least three pairs of paralogous genes with a probability
+								lower than 0.01 to occur by chance (see Methods) are plotted on two-dimensional diagrams
+								each representing an entire yeast genome (chromosomes, represented by shifted bars, are
+								ordered by increasing numbers from the lower-left corner). Each cross on the plots
+								corresponds to a pair of paralogous genes belonging to a defined block. The shaded
+								triangle in each plot gives numerical descriptions of the duplicated blocks found for
+								each species. Species abbreviations as in Fig. 1.
+							</aside>
+					</section>
+					<section id="slide5">
+							<h3 >Genome architecture shapes transcriptional landscape</h3>
+							<img width="75%" src="src/TIFSeq-1024x650.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://pelechanolab.com/">Pelechano Lab</a>
+							</small></p>
+							<aside class="notes">
+								Antisense transcripts can transmit regulatory signals to neighbouring promoters29.
+								Upon galactose induction in budding yeast, the same transcription factor (TF)-mediated
+								activation pathway induces the expression of GAL80 and an antisense transcript that
+								originates bidirectionally from its promoter. This antisense transcript runs upstream
+								into the promoter of SUR7 and represses its activity, thereby spreading GAL80 regulatory
+								signal to both genes
+							</aside>
+					</section>
+					<section id="slide6">
+							<h3 >Regulatory signals can propagate between neighbouring promoters</h3>
+							<img width="65%" src="src/nrg3594-f4_mod-01.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3063692/">Xu et al 2011</a><br>
+								<a href="http://www.nature.com/nrg/journal/v14/n12/full/nrg3594.html">Pelechano and Steinmetz 2013</a>
+							</small></p>
+							<aside class="notes">
+								Antisense transcripts can transmit regulatory signals to neighbouring promoters29.
+								Upon galactose induction in budding yeast, the same transcription factor (TF)-mediated
+								activation pathway induces the expression of GAL80 and an antisense transcript that
+								originates bidirectionally from its promoter. This antisense transcript runs upstream
+								into the promoter of SUR7 and represses its activity, thereby spreading GAL80 regulatory
+								signal to both genes
+							</aside>
+					</section>
+					<section id="slide7">
+							<blockquote cite="http://www.nature.com/nrg/journal/v14/n12/full/nrg3594.html">
+								&ldquo;...gene shuffling could be evolutionarily restricted in regions that support
+								beneficial interactions between loci, whereas in other regions, <b>new rearrangements
+								could give rise to novel interaction networks that are mediated by ncRNAs and
+								antisense transcripts.</b>&rdquo;
+							</blockquote>
+							<p><small>
+								<a href="http://www.nature.com/nrg/journal/v14/n12/full/nrg3594.html">Pelechano and Steinmetz 2013</a>
+							</small></p>
+					</section>
+					<section id="slide8">
+						<h3 style="color:#EEE;background-color:#007C80;border-radius: 15px;"> &nbsp;Can we evaluate how genome architecture mediates phenotype through transcriptional mechanisms <u>experimentally</u>?&nbsp; </h3>
+					</section>
+					<section
+						data-background="src/slide2_lenski-01.png"
+						data-background-size="contain"
+						data-background-color="black"
+						id="slide9">
+						<h3 style="color:#FFF;position:absolute;top:450px;right:0px">Experimental Evolution?</h3>
+					</section>
+					<section
+						data-background="src/slide2_church-01.png"
+						data-background-size="contain"
+						data-background-color="black"
+						id="slide10">
+						<h3 style="color:#FFF;position:absolute;top:-325px;left:-110px"><u>M</u>ultiplexed <u>A</u>utomated <u>G</u>enome <u>E</u>ngineering?</h3>
+					</section>
+					<section id="slide11">
+						<h4 >MAGE generates sequence diversity at many targeted chromosomal locations across a large population of cells through repeated introduction of synthetic DNA</h4>
+						<br>
+						<img width="60%" src="src/nature08187-f1.2.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+						<p><small>
+							<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3063692/">Wang et al. 2009</a><br>
+						</small></p>
+					</section>
+					<section>
+						<h4 >Encode generation of sequence diversity by design: <b><u>Sc2.0</u></b></h4>
+							<img width="55%" src="src/F3.large-01.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://science.sciencemag.org/content/343/6178/1426.full">Pennisi et al 2014</a>
+							</small></p>
+					</section>
+					<section>
+							<h3>International consortium for design and synthesis</h3>
+							<img width="75%" src="src/syn_progress.png" style="border:0px;box-shadow:0 0 0;margin:0 0"></img>
+							<p><i>...synthesis is ongoing...</i></p>
+							<p><small>
+								<a>Richardson et al Submitted</a>
+							</small></p>
+					</section>
+					<section>
+							<h3>Genome <i>shuffling</i> with SCRaMbLE</h3>
+							<p><small><u>S</u>ynthetic <u>C</u>hromosome <u>R</u>ecombination <u>a</u>nd <u>M</u>odification <u>b</u>y <u>L</u>oxP-mediated <u>E</u>volution</small></p>
+							<img width="90%" src="src/kbie_a_10919543_f0002.jpeg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://www.tandfonline.com/doi/abs/10.4161/bbug.19543">Dymond and Boeke 2012</a>
+							</small></p>
+					</section>
+				</section>
+
+
+
+
+				<section >
+					<h3 >Ongoing Sc2.0 projects</h3>
+					<br>
+					<ul>
+						<li class="fragment" >
+							What are the sequences of SCRaMbLEd genomes?&nbsp;&nbsp;
+							<span style="color:#EEE;background-color:#45462A;float:right;border-radius: 15px;"> &nbsp;Andreas&nbsp; </span></li>
+						<br>
+						<li class="fragment" >
+							How does SCRaMbLEing affect gene expression?&nbsp;&nbsp;
+							<span style="color:#EEE;background-color:#5E4955;float:right;border-radius: 15px;"> &nbsp;¯\_(ツ)_/¯&nbsp; </span> </li>
+					</ul>
+				</section>
+				<section
+					data-background="src/Yeast-Cell.jpg"
+					data-background-size="contain"
+					data-background-color="#2A292D">
+					<h3 style="color:#EEE;background-color:#007C80;border-radius: 15px;"> &nbsp;What are the sequences of SCRaMbLEd genomes?&nbsp; </h3>
+				</section>
+
+				<section >
+						<h4 >Start easy: SCRaMbLE strains derived from SynIXR parent</h4>
+						<img width="100%" src="src/synixr-01.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+				</section>
+				<section >
+						<h4 >Short reads cannot always reassemble SCRaMbLEd genomes</h4>
+						<img width="65%" src="src/scramble.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+						<p><small>
+							<a href="http://genome.cshlp.org/content/26/1/36.long">Shen et al. 2016</a>
+						</small></p>
+				</section>
+				<section
+
+						data-background="src/longread-01.jpg"
+						data-background-size="contain">
+				</section>
+				<section
+
+					data-background="src/synixrassembly-01.jpg"
+					data-background-size="contain">
+				</section>
+				<section
+
+					data-background="src/unscramble-01.jpg"
+					data-background-size="contain">
+				</section>
+				<section >
+						<h4 >Can increase chance of solving structure by increasing coverage</h4>
+						<img width="100%" src="src/JS734_insilico_assembly_coverage-01.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+				</section>
+				<section >
+						<h4 >Coverage trick doesn't always work for more complicated genomes</h4>
+						<img width="100%" src="src/JS735_insilico_assembly_coverage.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+				</section>
+				<section >
+						<h4 >Longer reads can help us get there...</h4>
+						<img width="100%" src="src/JS735_insilico_assembly_length.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+				</section>
+				<section >
+						<h4 >Playing the long read lottery? Can we rig it??</h4>
+						<br>
+						<img width="100%" src="src/crispr_scramble.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+				</section>
+				<section>
+					<pre><code class="python" data-trim contenteditable>
+import glob
+
+COVERAGE = [7, 10, 15, 30, 45, 60]
+REPS = [i for i in range(1,11)]
+REFERENCES = ["JS94_1","JS734_1"]
+
+shell.prefix("sleep 60; ")
+
+rule all:
+    input:
+        "aggStats.txt"
+
+rule simulator:
+    input:
+    output:
+        "samples/c{coverage}_{rep}.fasta"
+    params:
+        m="3986",
+        s="3057",
+        x="300",
+        dam="JS734_1.dam"
+    shell:
+        "simulator {params.dam} -U -m{params.m} -s{params.s} -x{params.x} -c{wildcards.coverage} > samples/c{wildcards.coverage}_{wildcards.rep}.fasta"
+
+rule canu:
+    input:
+        "samples/c{coverage}_{rep}.fasta"
+    output:
+        "samples/assembly/c{coverage}_{rep}.contigs.fasta",
+        "samples/assembly/c{coverage}_{rep}.correctedReads.fasta.gz",
+        "samples/assembly/c{coverage}_{rep}.gfa"
+    params:
+        genomeSize="0.066m",
+        seq_lib_type = "pacbio-raw", #library input type
+        use_grid = "0", #attach to grid
+        corMhapSensitivity = "high",
+        corMinCoverage = "0",
+        minOverlapLength = "200",
+        corMaxEvidenceErate = "0.3",
+        errorRate = "0.035",
+        corOutCoverage = "1000",
+        minReadLength = "200",
+        name="c{coverage}_{rep}"
+    shadow: "full"
+    shell:
+        "if test -f {output}; then rm {output}; fi && "
+        "canu -p {params.name} -d samples/assembly "
+        "genomeSize={params.genomeSize} -{params.seq_lib_type} "
+        "{input} useGrid={params.use_grid} corMhapSensitivity={params.corMhapSensitivity} "
+        "corMinCoverage={params.corMinCoverage} minOverlapLength={params.minOverlapLength} "
+        "errorRate={params.errorRate} && "
+        "touch {output}"
+
+rule circlator:
+    input:
+        contigs="samples/assembly/c{coverage}_{rep}.contigs.fasta",
+        creads="samples/assembly/c{coverage}_{rep}.correctedReads.fasta.gz"
+    output:
+        "samples/assembly/c{coverage}_{rep}.circlator.fasta"
+    threads: 20
+    shadow: "full"
+    shell:
+        "if test -f {output}; then rm {output}; fi && "
+        "circlator all --threads {threads} {input.contigs} {input.creads} circlator && "
+        "mv ./circlator/06.fixstart.fasta samples/assembly/c{wildcards.coverage}_{wildcards.rep}.circlator.fasta && "
+        "touch {output}"
+
+rule mummer:
+    input:
+        query="samples/assembly/c{coverage}_{rep}.circlator.fasta",
+        ref="/g/steinmetz/brooks/git/steinmetz-lab/yeast2_0/scramble/seq/{reference}.fasta"
+    output:
+        "samples/alignment/c{coverage}_{rep}-{reference}.originFix.txt"
+    threads: 20
+    shell:
+        "Rscript /g/steinmetz/brooks/git/steinmetz-lab/yeast2_0/scripts/alignANDmove.R "
+        "-r {input.ref} "
+        "-q {input.query} "
+        "-m samples/alignment/c{wildcards.coverage}_{wildcards.rep}-{wildcards.reference}"
+
+rule aggregate:
+    input:
+        expand("samples/alignment/c{coverage}_{rep}-{reference}.originFix.txt", coverage=COVERAGE, rep=REPS, reference=REFERENCES)
+    output:
+        "aggStats.txt"
+    shell:
+        """
+        echo 'S1\tE1\tS2\tE2\tLEN1\tLEN2\tPERCENTSIM\tREF\tQUERY\tSAMPLE' > {output} &&
+        for x in {input}; do
+            cat $x >> {output}
+        done
+        """
+
+					</code></pre>
+				</section>
+				<section >
+						<h4 >We're in for a challenge...</h4>
+						<img width="80%" src="src/m30000c120_10-JS735_1.originFix.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+				</section>
+				<section
+						>
+						<img width="100%" src="src/syn_progress.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+						<p><small>
+							<a>Richardson et al Submitted</a>
+						</small></p>
+				</section>
+				<section
+					data-background="src/Yeast-Cell.jpg"
+					data-background-size="contain">
+					<h3 style="color:#EEE;background-color:#5E4955;border-radius: 15px;"> &nbsp;How does SCRaMbLEing affect transcript isoforms?&nbsp; </h3>
+				</section>
+				<section
+					data-background="src/scramble_slide-01.jpg"
+					data-background-size="contain"
+					>
+				</section>
+				<section
+					data-background="src/tif_seq_slide-01.jpg"
+					data-background-size="contain"
+					>
+				</section>
+				<section
+					data-background="src/1928825_508512584657_2096_n.jpg"
+					data-background-size="contain">
+				</section>
+				<section id="thanks"
+					data-background="src/thankyou.png"
+					data-background-size="contain"
+					>
+				</section>
+			</div>
+		</div>
+		<div id="myLogo" style="position: absolute;
+                        bottom: 25px;
+                        left: 45px;
+                        width: 125px;
+                        height: 75px;">
+		<a href="https://www.embl.de/"><img width="50%" src="src/embl.png"></img></a>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
