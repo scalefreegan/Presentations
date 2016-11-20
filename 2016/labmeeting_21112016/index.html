@@ -41,7 +41,7 @@
 						<small><a href="http://bit.ly/2dL9OJU">bit.ly/2dL9OJU</a></small>
 					</p>
 				</section>
-				<section class="intro">
+				<section id="intro">
 					<section
 						data-background="src/Yeast-Cell.jpg"
 						data-background-size="contain"
@@ -148,14 +148,14 @@
 							<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3063692/">Wang et al. 2009</a><br>
 						</small></p>
 					</section>
-					<section>
+					<section id="slide12">
 						<h4 >Encode generation of sequence diversity by design: <b><u>Sc2.0</u></b></h4>
 							<img width="55%" src="src/F3.large-01.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
 							<p><small>
 								<a href="http://science.sciencemag.org/content/343/6178/1426.full">Pennisi et al 2014</a>
 							</small></p>
 					</section>
-					<section>
+					<section id="slide13">
 							<h3>International consortium for design and synthesis</h3>
 							<img width="75%" src="src/syn_progress.png" style="border:0px;box-shadow:0 0 0;margin:0 0"></img>
 							<p><i>...synthesis is ongoing...</i></p>
@@ -163,84 +163,92 @@
 								<a>Richardson et al Submitted</a>
 							</small></p>
 					</section>
-					<section>
-							<h3>Genome <i>shuffling</i> with SCRaMbLE</h3>
+					<section id="slide14">
+							<h3><i>Gene shuffling</i> with SCRaMbLE</h3>
 							<p><small><u>S</u>ynthetic <u>C</u>hromosome <u>R</u>ecombination <u>a</u>nd <u>M</u>odification <u>b</u>y <u>L</u>oxP-mediated <u>E</u>volution</small></p>
 							<img width="90%" src="src/kbie_a_10919543_f0002.jpeg" style="border:0px;box-shadow:0 0 0;margin:0 0">
 							<p><small>
 								<a href="http://www.tandfonline.com/doi/abs/10.4161/bbug.19543">Dymond and Boeke 2012</a>
 							</small></p>
 					</section>
+					<section id="slide15">
+							<h3>How is the transcriptional landscape modified by genome SCRaMbLEing?</h3>
+							<img width="100%" src="src/scramble_slide-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
 				</section>
-
-
-
-
-				<section >
-					<h3 >Ongoing Sc2.0 projects</h3>
-					<br>
-					<ul>
-						<li class="fragment" >
-							What are the sequences of SCRaMbLEd genomes?&nbsp;&nbsp;
-							<span style="color:#EEE;background-color:#45462A;float:right;border-radius: 15px;"> &nbsp;Andreas&nbsp; </span></li>
-						<br>
-						<li class="fragment" >
-							How does SCRaMbLEing affect gene expression?&nbsp;&nbsp;
-							<span style="color:#EEE;background-color:#5E4955;float:right;border-radius: 15px;"> &nbsp;¯\_(ツ)_/¯&nbsp; </span> </li>
-					</ul>
-				</section>
-				<section
-					data-background="src/Yeast-Cell.jpg"
-					data-background-size="contain"
-					data-background-color="#2A292D">
-					<h3 style="color:#EEE;background-color:#007C80;border-radius: 15px;"> &nbsp;What are the sequences of SCRaMbLEd genomes?&nbsp; </h3>
-				</section>
-
-				<section >
-						<h4 >Start easy: SCRaMbLE strains derived from SynIXR parent</h4>
-						<img width="100%" src="src/synixr-01.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
-				</section>
-				<section >
-						<h4 >Short reads cannot always reassemble SCRaMbLEd genomes</h4>
-						<img width="65%" src="src/scramble.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
-						<p><small>
-							<a href="http://genome.cshlp.org/content/26/1/36.long">Shen et al. 2016</a>
-						</small></p>
-				</section>
-				<section
-
-						data-background="src/longread-01.jpg"
-						data-background-size="contain">
-				</section>
-				<section
-
-					data-background="src/synixrassembly-01.jpg"
-					data-background-size="contain">
-				</section>
-				<section
-
-					data-background="src/unscramble-01.jpg"
-					data-background-size="contain">
-				</section>
-				<section >
-						<h4 >Can increase chance of solving structure by increasing coverage</h4>
-						<img width="100%" src="src/JS734_insilico_assembly_coverage-01.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
-				</section>
-				<section >
-						<h4 >Coverage trick doesn't always work for more complicated genomes</h4>
-						<img width="100%" src="src/JS735_insilico_assembly_coverage.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
-				</section>
-				<section >
-						<h4 >Longer reads can help us get there...</h4>
-						<img width="100%" src="src/JS735_insilico_assembly_length.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
-				</section>
-				<section >
-						<h4 >Playing the long read lottery? Can we rig it??</h4>
-						<br>
-						<img width="100%" src="src/crispr_scramble.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
-				</section>
-				<section>
-					<pre><code class="python" data-trim contenteditable>
+				<section id="sequencing">
+					<section
+						data-background="src/Yeast-Cell.jpg"
+						data-background-size="contain"
+						data-background-color="#2A292D"
+						id="slide16">
+						<h3 style="color:#EEE;background-color:#007C80;border-radius: 15px;"> &nbsp;What are the sequences of SCRaMbLEd genomes?&nbsp;</h3>
+						<img width="15%" src="src/andreas-01.jpg" style="float:right;box-shadow:0 0 0;margin:0 10px">
+						<span style="color:#FFF;background-color:#2A292D;position:absolute;right:20px;bottom:-35px;border-radius: 15px;"> &nbsp;Andreas&nbsp; </span></p>
+					</section>
+					<section id="slide17">
+							<h4 >64 strains derived from SCRaMbLE of SynIXR</h4>
+							<img width="55%" src="src/synixr-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>Each genome segment identified by color and number. ~1 gene per segment. <u>SCRaMbLEgram</u></small></p>
+					</section>
+					<section id="slide18">
+							<h4 >Extensive heterogeneity among SCRaMbLE strains</h4>
+							<img width="60%" src="src/scramble.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://genome.cshlp.org/content/26/1/36.long">Shen et al. 2016</a>
+							</small></p>
+					</section>
+					<section id="slide19">
+							<h4 >Many genomes can not be assembled uniquely from short reads</h4>
+							<p><small>JS794 has four potential solutions</small></p>
+							<img width="100%" src="src/JS734_scramblegram_onepage-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://genome.cshlp.org/content/26/1/36.long">Shen et al. 2016</a>
+							</small></p>
+					</section>
+					<section id="slide20">
+							<h4 >3rd-generation long-read technologies to solve SCRaMbLE genomes</h4>
+							<img width="100%" src="src/longread-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide21">
+							<h4 >Workflow for <i>de novo</i> assembly with long-reads</h4>
+							<p><small>Parental strain (JS94) can be solved with single SMRT cell</small></p>
+							<img width="100%" src="src/synixrassembly-01-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide22">
+							<h4 >Long-read assembly can unambiguously solve SCRaMbLE genomes</h4>
+							<p><small>However, strain JS734 could only be solved with data from several SMRT cells</small></p>
+							<img width="85%" src="src/unscramble-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide23">
+						<iframe src="http://localhost:5000/" width="100%" height="700px" frameBorder="0"></iframe>
+					</section>
+					<section id="slide24">
+						<ol>
+							<li>
+								Is it possible to solve every SCRaMbLE genome?
+							<br>
+							<li class="fragment" style="color:black">
+								If so, under what conditions (e.g. coverage, read-length)?
+							<br>
+						</ol>
+					</section>
+					<section id="slide25">
+							<h4 >Simulate PacBio reads to assess assembly conditions: workflow</h4>
+							<img width="65%" src="src/onedag-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section
+						data-background-video="http://scalefreegan.github.io/workflow.mp4"
+						id="slide26">
+						<h4 style="position:absolute;top:-325px;left:50px">Running many simulations? -> workflow management software</h4>
+					</section>
+					<section id="slide27">
+							<h4 >Workflow management with Snakemake</h4>
+							<img width="100%" src="src/workflow_many-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide28">
+						<h4 >Workflow management with <a href="https://bitbucket.org/snakemake/snakemake/wiki/Home">Snakemake</a></h4>
+						<pre><code class="python" data-trim contenteditable>
 import glob
 
 COVERAGE = [7, 10, 15, 30, 45, 60]
@@ -334,12 +342,54 @@ rule aggregate:
         done
         """
 
-					</code></pre>
+						</code></pre>
+					</section>
+					<section id="slide29">
+							<h4 >Complete assembly achieved frequently at high coverage for JS794</h4>
+							<img width="90%" src="src/JS734_insilico_assembly_coverage-01.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide30">
+							<h4 >Some SCRaMbLE genomes are full of inverted repeats<h4>
+							<p><small>Will increased coverage still lead to complete assembly?</small></p>
+							<img width="70%" src="src/m30000c120_10-JS735_1.originFix.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide31">
+							<h4 >Increased coverage doesn't guarantee resolution of more complicated genomes</h4>
+							<img width="100%" src="src/JS735_insilico_assembly_coverage.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide32">
+							<h4 >Some strains require a combination of depth and read length that is currently unachievable</h4>
+							<img width="100%" src="src/JS735_insilico_assembly_length.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide33">
+							<h4 >CRISPR-dCas9-mediated long-fragment enrichment strategy</h4>
+							<img width="100%" src="src/crispr_scramble-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide34">
+							<h4 >Competition from PacBio and Oxford Nanopore</h4>
+							<img width="70%" src="src/crispr_pacbio.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide35">
+						<h3 style="color:#EEE;background-color:#007C80;border-radius: 15px;float:left"> &nbsp;Next steps&nbsp;</h3>
+							<ol>
+								<li>
+									Is it possible to solve every SCRaMbLE genome?
+								<br>
+								<li class="fragment" style="color:black">
+									If so, under what conditions (e.g. coverage, read-length)?
+								<br>
+							</ol>
+						</section>
 				</section>
-				<section >
-						<h4 >We're in for a challenge...</h4>
-						<img width="80%" src="src/m30000c120_10-JS735_1.originFix.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
-				</section>
+
+
+
+
+
+
+
+
+
 				<section
 						>
 						<img width="100%" src="src/syn_progress.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
