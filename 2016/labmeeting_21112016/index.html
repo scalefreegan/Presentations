@@ -28,7 +28,7 @@
 		<div class="reveal">
 			<div class="slides">
 				<section data-background-color="#2A292D" id="slide1">
-					<h3 style="color:white">Gene expression from a SCRaMbLEd genome</h3>
+					<h3 style="color:white">Transcription from a SCRaMbLEd genome</h3>
 					<p style="color:white">
  						<a href="http://aaronbrooks.info">Aaron Brooks</a> /
 						<img height=40 align="middle"
@@ -38,7 +38,7 @@
 					<p style="color:white">
 						<small>Follow along on  <img height=40 align="middle" style="background:0px;margin:0px 5px 5px 5px;border:0;box-shadow:0;vertical-align:middle" data-src="src/GitHub-Mark/PNG/GitHub-Mark-Light-64px.png"></small>
 						<br>
-						<small><a href="http://bit.ly/2dL9OJU">bit.ly/2dL9OJU</a></small>
+						<small><a href="http://bit.ly/2fKpAbO">bit.ly/2fKpAbO</a></small>
 					</p>
 				</section>
 				<section id="intro">
@@ -50,7 +50,7 @@
 						<h3 style="color:#EEE;background-color:#007C80;border-radius: 15px;"> &nbsp;Why are genomes organized as we observe them?&nbsp; </h3>
 					</section>
 					<section id="slide3">
-							<h3 >Genetic synteny is conserved across closely related yeast species</h3>
+							<h3 >Synteny is conserved across closely related yeast species</h3>
 							<img width="100%" src="src/kellis_2003_fig1.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
 							<p><small>
 								<a href="http://www.nature.com/nature/journal/v423/n6937/full/nature01644.html">Kellis et al 2003</a>
@@ -66,7 +66,7 @@
 							</aside>
 					</section>
 					<section id="slide4">
-							<h3 >Genetic synteny decreases with evolutionary distance</h3>
+							<h3 >Synteny decreases with evolutionary distance</h3>
 							<img width="100%" src="src/dujon_2003_mod-01.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
 							<p><small>
 								<a href="http://www.nature.com/nature/journal/v430/n6995/full/nature02579.html#B14">Dujon et al 2004</a>
@@ -87,14 +87,6 @@
 							<p><small>
 								<a href="http://pelechanolab.com/">Pelechano Lab</a>
 							</small></p>
-							<aside class="notes">
-								Antisense transcripts can transmit regulatory signals to neighbouring promoters29.
-								Upon galactose induction in budding yeast, the same transcription factor (TF)-mediated
-								activation pathway induces the expression of GAL80 and an antisense transcript that
-								originates bidirectionally from its promoter. This antisense transcript runs upstream
-								into the promoter of SUR7 and represses its activity, thereby spreading GAL80 regulatory
-								signal to both genes
-							</aside>
 					</section>
 					<section id="slide6">
 							<h3 >Regulatory signals can propagate between neighbouring promoters</h3>
@@ -222,6 +214,7 @@
 					</section>
 					<section id="slide23">
 						<iframe src="http://localhost:5000/" width="100%" height="700px" frameBorder="0"></iframe>
+						<p style="position:absolute;top:630px;right:0px"><small>Sascha Meyers, Korbel Lab</small></p>
 					</section>
 					<section id="slide24">
 						<ol>
@@ -351,7 +344,7 @@ rule aggregate:
 					<section id="slide30">
 							<h4 >Some SCRaMbLE genomes are full of inverted repeats<h4>
 							<p><small>Will increased coverage still lead to complete assembly?</small></p>
-							<img width="70%" src="src/m30000c120_10-JS735_1.originFix.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<img width="80%" src="src/JS735_1-JE735-1-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
 					</section>
 					<section id="slide31">
 							<h4 >Increased coverage doesn't guarantee resolution of more complicated genomes</h4>
@@ -370,56 +363,96 @@ rule aggregate:
 							<img width="70%" src="src/crispr_pacbio.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
 					</section>
 					<section id="slide35">
-						<h3 style="color:#EEE;background-color:#007C80;border-radius: 15px;float:left"> &nbsp;Next steps&nbsp;</h3>
-							<ol>
-								<li>
-									Is it possible to solve every SCRaMbLE genome?
-								<br>
-								<li class="fragment" style="color:black">
-									If so, under what conditions (e.g. coverage, read-length)?
-								<br>
-							</ol>
-						</section>
+						<h3 style="color:#EEE;background-color:#007C80;border-radius: 15px;position:absolute;top:-5px"> &nbsp;Next steps&nbsp;</h3>
+							<ul>
+									<br>
+									<li>dCas9-mediated enrichment of SynIXR segments</li>
+									<ul>
+										<small><li class="fragment">PepCore purification of 6XHis-MBP-dCas9-3XFLAG / IVT sgRNAs ready / qPCR enirchment assay</li></small>
+										<small><li class="fragment">Andreas is a champ!</li></small>
+									</ul>
+								<li class="fragment">Proof of concept: enrichment-assisted <i>de novo</i> assembly</li>
+								<li class="fragment">Design platform for automated sgRNA selection from assembly (gfa)</li>
+								<li class="fragment">Multi-chromosome SCRaMbLE??</li>
+							</ul>
+					</section>
 				</section>
-
-
-
-
-
-
-
-
-
-				<section
-						>
-						<img width="100%" src="src/syn_progress.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
-						<p><small>
-							<a>Richardson et al Submitted</a>
-						</small></p>
-				</section>
-				<section
-					data-background="src/Yeast-Cell.jpg"
-					data-background-size="contain">
-					<h3 style="color:#EEE;background-color:#5E4955;border-radius: 15px;"> &nbsp;How does SCRaMbLEing affect transcript isoforms?&nbsp; </h3>
-				</section>
-				<section
-					data-background="src/scramble_slide-01.jpg"
-					data-background-size="contain"
-					>
-				</section>
-				<section
-					data-background="src/tif_seq_slide-01.jpg"
-					data-background-size="contain"
-					>
-				</section>
-				<section
-					data-background="src/1928825_508512584657_2096_n.jpg"
-					data-background-size="contain">
+				<section id="tifseq">
+					<section
+						data-background="src/Yeast-Cell.jpg"
+						data-background-size="contain"
+						data-background-color="#2A292D"
+						id="slide36">
+						<h3 style="color:#EEE;background-color:#007C80;border-radius: 15px;"> &nbsp;What happens to the transcriptional landscapes in a SCRaMbLEd genome?&nbsp;</h3>
+					</section>
+					<section id="slide37">
+							<h3>How is the transcriptional landscape modified by genome SCRaMbLEing?</h3>
+							<img width="100%" src="src/scramble_slide-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide38">
+							<h3><u>T</u>ranscript <u>I</u>so<u>f</u>orm sequencing: TIF-Seq</h3>
+							<img width="100%" src="src/tif_seq_slide-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide39">
+						<ol>
+							<li>
+								Which SCRaMbLE strain?</li>
+							<li class="fragment">
+								Which conditions?</li>
+						</ol>
+					</section>
+					<section id="slide40">
+							<h4 >Which SCRaMbLE strains have the most disrupted transcriptome?</h4>
+							<img width="60%" src="src/scramble.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://genome.cshlp.org/content/26/1/36.long">Shen et al. 2016</a>
+							</small></p>
+					</section>
+					<section id="slide41">
+							<h3>mTIF widths after liftOver to SynIXR</h3>
+							<img width="100%" src="src/mtif_liftover-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide42">
+							<h3>SynIXR contains a variety of mTIFs</h3>
+							<img width="100%" src="src/mtif_type-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide43">
+							<h3>A majority of SynIXR mTIFs could be disrupted by SCRaMbLE</h3>
+							<img width="100%" src="src/disrupted_mtif_counts_synIXR-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide44">
+							<h3>loxPsym sites occur near ends of SCRaMbLE-sensitive mTIFs</h3>
+							<img width="100%" src="src/mtif_loxpsym_loc-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide45">
+							<h3>Some mTIFs are differentially expressed in glucose vs. galactose</h3>
+							<img width="80%" src="src/mtif_counts.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide46">
+							<h3>SynIXR mTIFs are expressed similarly in glucose vs. galactose</h3>
+							<img width="80%" src="src/mtif_counts_synIXR.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide47">
+						<h3 style="color:#EEE;background-color:#007C80;border-radius: 15px;position:absolute;top:-50px"> &nbsp;Next steps&nbsp;</h3>
+							<ul>
+								<li>Look for SCRaMbLE-sensitive bidirectional promoters/antisense transcripts in Zhenyu's data</li>
+								<li class="fragment">Choose 2 SCRaMbLE strains for TIF-Seq (4 total strains for first TIF-Seq run)</li>
+								<li class="fragment">Delay selection of condition. Run first in standard YPD conditions.</li>
+							</ul>
+					</section>
+					<section id="slide48">
+							<h3>Are there entirely new transcriptional features in a SCRaMbLEd genome?</h3>
+							<img width="100%" src="src/scramble_slide-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section
+						data-background-color="black",
+						data-background-video="http://scalefreegan.github.io/back2future.mp4"
+						id="slide49">
+					</section>
 				</section>
 				<section id="thanks"
 					data-background="src/thankyou.png"
-					data-background-size="contain"
-					>
+					data-background-size="contain">
 				</section>
 			</div>
 		</div>
