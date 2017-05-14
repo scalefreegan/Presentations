@@ -4,9 +4,9 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Lab meeting: 21.11.2016</title>
+		<title>GB Unit Retreat: 16.05.2017</title>
 
-		<meta name="description" content="Steinmetz Lab Meeting 2016<">
+		<meta name="description" content="GB Unit Retreat 2017<">
 		<meta name="author" content="Aaron Brooks">
 
 		<link rel="stylesheet" href="css/reveal.css">
@@ -23,12 +23,28 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+
+		<style>
+		.rotate {
+	    -webkit-transform: rotate(25deg);
+	    -moz-transform: rotate(25deg);
+	    -o-transform: rotate(25deg);
+	    -ms-transform: rotate(25deg);
+	    transform: rotate(25deg);
+		}
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
 				<section data-background-color="#2A292D" id="slide1">
-					<h3 style="color:white">Transcription from a SCRaMbLEd genome</h3>
+					<h2 style="color:white">Transcription in a <b><span
+						style="color:#9932CC">S</span><span
+						style="color:#4169E1">C</span><span
+						style="color:#3CB371">R</span></b>a<b><span
+						style="color:#FFFF33">M</span></b>b<b><span
+						style="color:#FF8C00">L</span><span
+						style="color:#FF0000">E</span></b>d genome</h2>
 					<p style="color:white">
  						<a href="http://aaronbrooks.info">Aaron Brooks</a> /
 						<img height=40 align="middle"
@@ -46,132 +62,42 @@
 						data-background="src/Yeast-Cell.jpg"
 						data-background-size="contain"
 						data-background-color="#2A292D"
-						id="slide2">
+						id="slide1">
 						<h3 style="color:#EEE;background-color:#007C80;border-radius: 15px;"> &nbsp;Why are genomes organized as we observe them?&nbsp; </h3>
+						<!-- <h3 class="fragment" style="color:#EEE;background-color:#007C80;border-radius: 15px;"> &nbsp;What happens when we rearrange them?&nbsp; </h3> -->
+					</section>
+					<section id="slide2">
+							<h3>"A big step towards an artificial yeast genome"</h3>
+							<img width="100%" src="src/20170311_STD001_0.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0"></img>
+							<p><small>
+								<a
+								href="http://www.economist.com/news/science-and-technology/21718479-success-would-usher-true-genetic-engineering-big-step-towards-artificial">
+								Economist, Mar 11th 2017</a>
+							</small></p>
 					</section>
 					<section id="slide3">
-							<h3 >Synteny is conserved among closely related yeast species</h3>
-							<img width="100%" src="src/kellis_2003_fig1.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<h3>"Remodeling the yeast genome piece by piece"</h3>
+							<img width="100%" src="src/sc20_science.png" style="border:0px;box-shadow:0 0 0;margin:0 0"></img>
 							<p><small>
-								<a href="http://www.nature.com/nature/journal/v423/n6937/full/nature01644.html">Kellis et al 2003</a>
+								<a href="http://science.sciencemag.org/content/355/6329/1038">Synthetic Yeast Genome Project (Sc2.0) Science Special Issue</a>
 							</small></p>
-							<aside class="notes">
-								Figure 1: Aligned ORFs across four species. A 50-kb segment of S. cerevisiae chromosome VII
-								aligned with orthologous contigs from each of the other three species.
-								Predicted ORFs are shown as arrows pointing in the direction of transcription.
-								Orthologous ORFs are connected by dotted lines and are coloured by the type of
-								correspondence: red for 1-to-1 matches, blue for 1-to-2 matches and white for
-								unmatched ORFs. Sequence gaps are indicated by vertical lines at the ends of contigs,
-								with the estimated size of each gap shown by the length of the hook.
-								Most ORFs have clear one-to-one orthologous matches in each species, providing a dense set of
-								landmarks (average spacing approx2 kb) to define blocks of conserved synteny covering essentially the
-								entire genome (Fig. 1). For a small number of ORFs (211), the correspondence is ambiguous, however.
-								These ambiguous matches almost all reflect local gene-family expansion or contraction.
-								Most of the ambiguities are markedly clustered in telomeric regions (Fig. 2). More than 80% fall into one of 32
-								clusters of two or more genes (average size approx18 kb, together comprising approx4% of the genome), which
-								correspond nearly perfectly to the 32 telomeric regions of the 16 chromosomes of S. cerevisiae. Only one telomeric
-								region lacks a cluster (chromosome VI-R). And only one cluster does not lie in telomeric regions in S. cerevisiae: it
-								is a recent insertion of a segment that is telomeric in the other three species.
-								All non-telomeric translocations are mediated by Ty elements (2, 4, 5, 6, 7, 8, 9) or nearly identical copies of ribosomal protein genes
-							</aside>
 					</section>
 					<section id="slide4">
-							<h3 >Synteny decreases with evolutionary distance</h3>
-							<img width="100%" src="src/dujon_2003_mod-01.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
-							<p><small><i>&ldquo;...different yeast lineages have evolved through a marked interplay between several distinct molecular mechanisms,
-								including tandem gene repeat formation, segmental duplication, a massive genome duplication and extensive gene loss.&rdquo;</i></small></p>
+							<h3>International consortium for design and synthesis</h3>
+							<img width="75%" src="src/sc_design.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0"></img>
+							<p><i>...synthesis is ongoing...</i></p>
 							<p><small>
-								<a href="http://www.nature.com/nature/journal/v430/n6995/full/nature02579.html#B14">Dujon et al 2004</a>
+								<a href="http://science.sciencemag.org/content/355/6329/1040.long">Richardson et al. 2017</a>
 							</small></p>
-							<aside class="notes">
-								Chromosomal blocks containing at least three pairs of paralogous genes with a probability
-								lower than 0.01 to occur by chance (see Methods) are plotted on two-dimensional diagrams
-								each representing an entire yeast genome (chromosomes, represented by shifted bars, are
-								ordered by increasing numbers from the lower-left corner). Each cross on the plots
-								corresponds to a pair of paralogous genes belonging to a defined block. The shaded
-								triangle in each plot gives numerical descriptions of the duplicated blocks found for
-								each species. Species abbreviations as in Fig. 1.
-							</aside>
 					</section>
 					<section id="slide5">
-							<h3 >Changes in genome architecture shape the transcriptional landscape</h3>
-							<img width="75%" src="src/TIFSeq-1024x650.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+						<h3 >Encode sequence diversity by design: <b><u>Sc2.0</u></b></h3>
+							<img width="55%" src="src/F3.large-01.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
 							<p><small>
-								<a href="http://pelechanolab.com/">Pelechano Lab</a>
+								<a href="http://science.sciencemag.org/content/343/6178/1426.full">Pennisi et al. 2014</a>
 							</small></p>
 					</section>
 					<section id="slide6">
-							<h3 >Regulatory signals can propagate between neighbouring promoters</h3>
-							<img width="65%" src="src/nrg3594-f4_mod-01.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
-							<p><small>
-								<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3063692/">Xu et al 2011</a><br>
-								<a href="http://www.nature.com/nrg/journal/v14/n12/full/nrg3594.html">Pelechano and Steinmetz 2013</a>
-							</small></p>
-							<aside class="notes">
-								Antisense transcripts can transmit regulatory signals to neighbouring promoters29.
-								Upon galactose induction in budding yeast, the same transcription factor (TF)-mediated
-								activation pathway induces the expression of GAL80 and an antisense transcript that
-								originates bidirectionally from its promoter. This antisense transcript runs upstream
-								into the promoter of SUR7 and represses its activity, thereby spreading GAL80 regulatory
-								signal to both genes
-							</aside>
-					</section>
-					<section id="slide7">
-							<blockquote cite="http://www.nature.com/nrg/journal/v14/n12/full/nrg3594.html">
-								&ldquo;...gene shuffling could be evolutionarily restricted in regions that support
-								beneficial interactions between loci, whereas in other regions, <b>new rearrangements
-								could give rise to novel interaction networks that are mediated by ncRNAs and
-								antisense transcripts.</b>&rdquo;
-							</blockquote>
-							<p><small>
-								<a href="http://www.nature.com/nrg/journal/v14/n12/full/nrg3594.html">Pelechano and Steinmetz 2013</a>
-							</small></p>
-					</section>
-					<section id="slide8">
-						<h3 style="color:#EEE;background-color:#007C80;border-radius: 15px;"> &nbsp;Can we evaluate how genome architecture mediates
-							phenotype through transcriptional mechanisms <u>experimentally</u>?&nbsp; </h3>
-						<p class="fragment"><small><i>&ldquo;Identifying the mechanisms of eukaryotic genome evolution by comparative genomics
-							is often complicated by the multiplicity of events that have taken place throughout the history of individual lineages,
-							leaving only distorted and superimposed traces in the genome of each living organism.&rdquo;</i> -Dujon et al 2004</small></p>
-					</section>
-					<section
-						data-background="src/slide2_lenski-01.png"
-						data-background-size="contain"
-						data-background-color="black"
-						id="slide9">
-						<h3 style="color:#FFF;position:absolute;top:450px;right:0px">Experimental Evolution?</h3>
-					</section>
-					<section
-						data-background="src/slide2_church-01.png"
-						data-background-size="contain"
-						data-background-color="black"
-						id="slide10">
-						<h3 style="color:#FFF;position:absolute;top:-325px;left:-110px"><u>M</u>ultiplexed <u>A</u>utomated <u>G</u>enome <u>E</u>ngineering?</h3>
-					</section>
-					<section id="slide11">
-						<h4 >MAGE generates sequence diversity at many targeted chromosomal locations across a large population of cells through repeated introduction of synthetic DNA</h4>
-						<br>
-						<img width="60%" src="src/nature08187-f1.2.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
-						<p><small>
-							<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3063692/">Wang et al. 2009</a><br>
-						</small></p>
-					</section>
-					<section id="slide12">
-						<h4 >Encode generation of sequence diversity by design: <b><u>Sc2.0</u></b></h4>
-							<img width="55%" src="src/F3.large-01.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
-							<p><small>
-								<a href="http://science.sciencemag.org/content/343/6178/1426.full">Pennisi et al 2014</a>
-							</small></p>
-					</section>
-					<section id="slide13">
-							<h3>International consortium for design and synthesis</h3>
-							<img width="75%" src="src/syn_progress.png" style="border:0px;box-shadow:0 0 0;margin:0 0"></img>
-							<p><i>...synthesis is ongoing...</i></p>
-							<p><small>
-								<a>Richardson et al Submitted</a>
-							</small></p>
-					</section>
-					<section id="slide14">
 							<h3><i>Gene shuffling</i> with SCRaMbLE</h3>
 							<p><small><u>S</u>ynthetic <u>C</u>hromosome <u>R</u>ecombination <u>a</u>nd <u>M</u>odification <u>b</u>y <u>L</u>oxP-mediated <u>E</u>volution</small></p>
 							<img width="90%" src="src/kbie_a_10919543_f0002.jpeg" style="border:0px;box-shadow:0 0 0;margin:0 0">
@@ -179,60 +105,56 @@
 								<a href="http://www.tandfonline.com/doi/abs/10.4161/bbug.19543">Dymond and Boeke 2012</a>
 							</small></p>
 					</section>
-					<section id="slide15">
+					<section id="slide7">
 							<h3>How is the transcriptional landscape modified by genome SCRaMbLEing?</h3>
 							<img width="100%" src="src/scramble_slide-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
 					</section>
 				</section>
 				<section id="sequencing">
 					<section
-						data-background="src/Yeast-Cell.jpg"
+						data-background="src/genome-yeast-846x410-01.png"
 						data-background-size="contain"
 						data-background-color="#2A292D"
-						id="slide16">
-						<h3 style="color:#EEE;background-color:#007C80;border-radius: 15px;"> &nbsp;What are the sequences of SCRaMbLEd genomes?&nbsp;</h3>
+						id="slide8">
+						<h3 style="color:#EEE;background-color:#007C80;border-radius: 15px;"> &nbsp;What is the sequence of a SCRaMbLEd genome?&nbsp;</h3>
 						<img width="15%" src="src/andreas-01.jpg" style="float:right;box-shadow:0 0 0;margin:0 10px">
 						<span style="color:#FFF;background-color:#2A292D;position:absolute;right:20px;bottom:-35px;border-radius: 15px;"> &nbsp;Andreas&nbsp; </span></p>
 					</section>
-					<section id="slide17">
+					<section id="slide9">
 							<h4 >64 strains derived from SCRaMbLE of SynIXR</h4>
 							<img width="55%" src="src/synixr-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
 							<p><small>Each genome segment identified by color and number. ~1 gene per segment. <u>SCRaMbLEgram</u></small></p>
 					</section>
-					<section id="slide18">
+					<section id="slide10">
 							<h4 >Extensive heterogeneity among SCRaMbLE strains</h4>
 							<img width="60%" src="src/scramble.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
 							<p><small>
 								<a href="http://genome.cshlp.org/content/26/1/36.long">Shen et al. 2016</a>
 							</small></p>
 					</section>
-					<section id="slide19">
-							<h4 >Many genomes cannot be assembled uniquely from short reads</h4>
-							<p><small>JS794 has four potential solutions</small></p>
+					<section id="slide11">
+							<h4 >Many genomes cannot be assembled fully with short reads</h4>
+							<p><small>JS734 has four potential solutions</small></p>
 							<img width="100%" src="src/JS734_scramblegram_onepage-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
 							<p><small>
 								<a href="http://genome.cshlp.org/content/26/1/36.long">Shen et al. 2016</a>
 							</small></p>
 					</section>
-					<section id="slide20">
+					<!-- <section id="slide12">
 							<h4 >3rd-generation long-read technologies to solve SCRaMbLE genomes</h4>
-							<img width="100%" src="src/longread-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
-					</section>
-					<section id="slide21">
+							<img width="100%" src="src/longread.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section> -->
+					<section id="slide13">
 							<h4 >Workflow for <i>de novo</i> assembly with long-reads</h4>
 							<p><small>Parental strain (JS94) can be solved with single SMRT cell</small></p>
 							<img width="100%" src="src/synixrassembly-01-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
 					</section>
-					<section id="slide22">
-							<h4 >Long-read assembly can unambiguously solve SCRaMbLE genomes</h4>
-							<p><small>However, strain JS734 could only be solved with data from several SMRT cells</small></p>
-							<img width="85%" src="src/unscramble-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					<section id="slide14">
+							<h4>Near complete assembly of SCRaMbLE genomes with long-reads</h4>
+							<p><small>**JS734 could only be solved by aggregating data from several SMRT cells**</small></p>
+							<img width="100%" src="src/unscramble-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
 					</section>
-					<!-- <section id="slide23">
-						<iframe src="http://localhost:5000/" width="100%" height="700px" frameBorder="0"></iframe>
-						<p style="position:absolute;top:630px;right:0px"><small>Sascha Meyers, Korbel Lab</small></p>
-					</section> -->
-					<section id="slide24">
+					<section id="slide15">
 						<ol>
 							<li>
 								Is it possible to solve every SCRaMbLE genome?
@@ -242,232 +164,104 @@
 							<br>
 						</ol>
 					</section>
-					<section id="slide25">
-							<h4 >Simulate PacBio reads to assess assembly conditions: workflow</h4>
-							<img width="65%" src="src/onedag-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					<section id="slide16">
+							<h4 >Complete assembly achieved frequently at high coverage for JS734</h4>
+							<img width="100%" src="src/JS734_insilico_assembly_coverage-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
 					</section>
-					<section
-						data-background-video="http://scalefreegan.github.io/workflow.mp4"
-						id="slide26">
-						<h4 style="position:absolute;top:-325px;left:50px">Running many simulations? -> workflow management software</h4>
-					</section>
-					<section id="slide27">
-							<h4 >Workflow management with Snakemake</h4>
-							<img width="100%" src="src/workflow_many-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
-					</section>
-					<section id="slide28">
-						<h4 >Workflow management with <a href="https://bitbucket.org/snakemake/snakemake/wiki/Home">Snakemake</a></h4>
-						<pre><code class="python" data-trim contenteditable>
-import glob
-
-COVERAGE = [7, 10, 15, 30, 45, 60]
-REPS = [i for i in range(1,11)]
-REFERENCES = ["JS94_1","JS734_1"]
-
-shell.prefix("sleep 60; ")
-
-rule all:
-    input:
-        "aggStats.txt"
-
-rule simulator:
-    input:
-    output:
-        "samples/c{coverage}_{rep}.fasta"
-    params:
-        m="3986",
-        s="3057",
-        x="300",
-        dam="JS734_1.dam"
-    shell:
-        "simulator {params.dam} -U -m{params.m} -s{params.s} -x{params.x} -c{wildcards.coverage} > samples/c{wildcards.coverage}_{wildcards.rep}.fasta"
-
-rule canu:
-    input:
-        "samples/c{coverage}_{rep}.fasta"
-    output:
-        "samples/assembly/c{coverage}_{rep}.contigs.fasta",
-        "samples/assembly/c{coverage}_{rep}.correctedReads.fasta.gz",
-        "samples/assembly/c{coverage}_{rep}.gfa"
-    params:
-        genomeSize="0.066m",
-        seq_lib_type = "pacbio-raw", #library input type
-        use_grid = "0", #attach to grid
-        corMhapSensitivity = "high",
-        corMinCoverage = "0",
-        minOverlapLength = "200",
-        corMaxEvidenceErate = "0.3",
-        errorRate = "0.035",
-        corOutCoverage = "1000",
-        minReadLength = "200",
-        name="c{coverage}_{rep}"
-    shadow: "full"
-    shell:
-        "if test -f {output}; then rm {output}; fi && "
-        "canu -p {params.name} -d samples/assembly "
-        "genomeSize={params.genomeSize} -{params.seq_lib_type} "
-        "{input} useGrid={params.use_grid} corMhapSensitivity={params.corMhapSensitivity} "
-        "corMinCoverage={params.corMinCoverage} minOverlapLength={params.minOverlapLength} "
-        "errorRate={params.errorRate} && "
-        "touch {output}"
-
-rule circlator:
-    input:
-        contigs="samples/assembly/c{coverage}_{rep}.contigs.fasta",
-        creads="samples/assembly/c{coverage}_{rep}.correctedReads.fasta.gz"
-    output:
-        "samples/assembly/c{coverage}_{rep}.circlator.fasta"
-    threads: 20
-    shadow: "full"
-    shell:
-        "if test -f {output}; then rm {output}; fi && "
-        "circlator all --threads {threads} {input.contigs} {input.creads} circlator && "
-        "mv ./circlator/06.fixstart.fasta samples/assembly/c{wildcards.coverage}_{wildcards.rep}.circlator.fasta && "
-        "touch {output}"
-
-rule mummer:
-    input:
-        query="samples/assembly/c{coverage}_{rep}.circlator.fasta",
-        ref="/g/steinmetz/brooks/git/steinmetz-lab/yeast2_0/scramble/seq/{reference}.fasta"
-    output:
-        "samples/alignment/c{coverage}_{rep}-{reference}.originFix.txt"
-    threads: 20
-    shell:
-        "Rscript /g/steinmetz/brooks/git/steinmetz-lab/yeast2_0/scripts/alignANDmove.R "
-        "-r {input.ref} "
-        "-q {input.query} "
-        "-m samples/alignment/c{wildcards.coverage}_{wildcards.rep}-{wildcards.reference}"
-
-rule aggregate:
-    input:
-        expand("samples/alignment/c{coverage}_{rep}-{reference}.originFix.txt", coverage=COVERAGE, rep=REPS, reference=REFERENCES)
-    output:
-        "aggStats.txt"
-    shell:
-        """
-        echo 'S1\tE1\tS2\tE2\tLEN1\tLEN2\tPERCENTSIM\tREF\tQUERY\tSAMPLE' > {output} &&
-        for x in {input}; do
-            cat $x >> {output}
-        done
-        """
-
-						</code></pre>
-					</section>
-					<section id="slide29">
-							<h4 >Complete assembly achieved frequently at high coverage for JS794</h4>
-							<img width="90%" src="src/JS734_insilico_assembly_coverage-01.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
-					</section>
-					<section id="slide30">
+					<section id="slide17">
 							<h4 >Some SCRaMbLE genomes are full of inverted repeats<h4>
 							<p><small>Will increased coverage still lead to complete assembly?</small></p>
 							<img width="80%" src="src/JS735_1-JE735-1-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
 					</section>
-					<section id="slide31">
+					<section id="slide18">
 							<h4 >Increased coverage doesn't guarantee resolution of more complicated genomes</h4>
 							<img width="100%" src="src/JS735_insilico_assembly_coverage.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
 					</section>
-					<section id="slide32">
-							<h4 >Some strains require a combination of depth and read length that is currently unachievable</h4>
+					<section id="slide19">
+							<h4 >Some strains require a combination of depth and increased read length</h4>
 							<img width="100%" src="src/JS735_insilico_assembly_length.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
 					</section>
-					<section id="slide33">
-							<h4 >CRISPR-dCas9-mediated long-fragment enrichment strategy</h4>
-							<img width="100%" src="src/crispr_scramble-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					<section id="slide20">
+							<h4 >Nanopore sequencing + ultralong reads = reference quality assembly?</h4>
+							<img width="55%" src="src/ultralong_reads-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://biorxiv.org/content/early/2017/04/20/128835">Jain et al. 2017 <i>bioRxiv</i></a> and
+								<a href="https://genomeinformatics.github.io/cliveome/">Blog post: <i>"Assembling the Cliveome"</i></a>
+							</small></p>
 					</section>
-					<section id="slide34">
-							<h4 >Competition from PacBio and Oxford Nanopore</h4>
-							<img width="70%" src="src/crispr_pacbio.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
-					</section>
-					<section id="slide35">
-						<h3 style="color:#EEE;background-color:#007C80;border-radius: 15px;position:absolute;top:-5px"> &nbsp;Next steps&nbsp;</h3>
-							<ul>
-									<br>
-									<li>dCas9-mediated enrichment of SynIXR segments</li>
-									<ul>
-										<small><li class="fragment">PepCore purification of 6XHis-MBP-dCas9-3XFLAG / IVT sgRNAs ready / qPCR enirchment assay</li></small>
-										<small><li class="fragment">Andreas is a champ!</li></small>
-									</ul>
-								<li class="fragment">Proof of concept: enrichment-assisted <i>de novo</i> assembly</li>
-								<li class="fragment">Design platform for automated sgRNA selection from assembly (gfa)</li>
-								<li class="fragment">Multi-chromosome SCRaMbLE??</li>
-							</ul>
+					<section id="slide21">
+							<img width="100%" src="src/catch-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://biorxiv.org/content/early/2017/03/01/110163">Gabrieli et al. 2017 <i>bioRxiv</i></a>
+							</small></p>
 					</section>
 				</section>
 				<section id="tifseq">
 					<section
-						data-background="src/Yeast-Cell.jpg"
+						data-background="src/genome-yeast-846x410-01.png"
 						data-background-size="contain"
 						data-background-color="#2A292D"
-						id="slide36">
-						<h3 style="color:#EEE;background-color:#007C80;border-radius: 15px;"> &nbsp;What happens to the transcriptional landscapes in a SCRaMbLEd genome?&nbsp;</h3>
+						id="slide22">
+						<h3 style="color:#EEE;background-color:#007C80;border-radius: 15px;"> &nbsp;How is a SCRaMbLEd genome transcribed?&nbsp;</h3>
+						<img width="15%" src="src/andreas-01.jpg" style="float:right;box-shadow:0 0 0;margin:0 10px">
+						<span style="color:#FFF;background-color:#2A292D;position:absolute;right:20px;bottom:-35px;border-radius: 15px;"> &nbsp;Andreas&nbsp; </span></p>
 					</section>
-					<section id="slide37">
+					<section id="slide23">
+							<h3 >Transcription is linked to genome architecture</h3>
+							<img width="75%" src="src/TIFSeq-1024x650.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://pelechanolab.com/">Pelechano Lab</a>
+							</small></p>
+					</section>
+					<section id="slide24">
 							<h3>How is the transcriptional landscape modified by genome SCRaMbLEing?</h3>
 							<img width="100%" src="src/scramble_slide-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
 					</section>
-					<section id="slide38">
-							<h3><u>T</u>ranscript <u>I</u>so<u>f</u>orm sequencing: TIF-Seq</h3>
-							<img width="100%" src="src/tif_seq_slide-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					<section id="slide25">
+							<h3 >Sequencing methods to measure changes in transcriptome</h3>
+							<img width="65%" src="src/rna_seq-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
 					</section>
-					<section id="slide39">
-						<ol>
-							<li>
-								Which SCRaMbLE strain?</li>
-							<li class="fragment">
-								Which conditions?</li>
-						</ol>
+					<section id="slide26">
+							<img width="20%" class="rotate" src="src/FreshBaked.png" style="position:absolute;right:-100px;top:-10px;box-shadow:0 0 0;border:0px;margin:0 10px;z-index:1;">
+							<h3 >3'-end profiles change after SCRaMbLE</h3>
+							<img width="90%" src="src/seg13-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
 					</section>
-					<section id="slide40">
-							<h4 >Which SCRaMbLE strains have the most disrupted transcriptome?</h4>
-							<img width="60%" src="src/scramble.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					<section id="slide27">
+							<img width="20%" class="rotate" src="src/FreshBaked.png" style="position:absolute;right:-100px;top:-10px;box-shadow:0 0 0;border:0px;margin:0 10px;z-index:1;">
+							<h3 >Genome-wide 3'-end variation? </h3>
+							<img width="75%%" src="src/kpca-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
 							<p><small>
-								<a href="http://genome.cshlp.org/content/26/1/36.long">Shen et al. 2016</a>
+								Kernel PCA (Cosine kernel) from 22 segments represented in all strains
 							</small></p>
 					</section>
-					<section id="slide41">
-							<h3>mTIF widths after liftOver to SynIXR</h3>
-							<img width="100%" src="src/mtif_liftover-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+				</section>
+				<section id="scramblein">
+					<section
+						data-background="src/genome-yeast-846x410-01.png"
+						data-background-size="contain"
+						data-background-color="#2A292D"
+						id="slide28">
+						<h3 style="color:#EEE;background-color:#007C80;border-radius: 15px;"> &nbsp;Can we SCRaMbLE-<b><u>in</u></b> new features?&nbsp;</h3>
 					</section>
-					<section id="slide42">
-							<h3>SynIXR contains a variety of mTIFs</h3>
-							<img width="100%" src="src/mtif_type-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					<section id="slide29">
+							<h3 >SCRaMbLE-in of violacein biosynthetic pathway</h3>
+							<img width="80%" src="src/violacein.001-01.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://www.cailab.org/">Cai Lab, University of Edinburgh</a>
+							</small></p>
 					</section>
-					<section id="slide43">
-							<h3>A majority of SynIXR mTIFs could be disrupted by SCRaMbLE</h3>
-							<img width="100%" src="src/disrupted_mtif_counts_synIXR-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
-					</section>
-					<section id="slide44">
-							<h3>loxPsym sites occur near ends of SCRaMbLE-sensitive mTIFs</h3>
-							<img width="100%" src="src/mtif_loxpsym_loc-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
-					</section>
-					<section id="slide45">
-							<h3>Some mTIFs are differentially expressed in glucose vs. galactose</h3>
-							<img width="80%" src="src/mtif_counts.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
-					</section>
-					<section id="slide46">
-							<h3>SynIXR mTIFs are expressed similarly in glucose vs. galactose</h3>
-							<img width="80%" src="src/mtif_counts_synIXR.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
-					</section>
-					<section id="slide47">
-						<h3 style="color:#EEE;background-color:#007C80;border-radius: 15px;position:absolute;top:-50px"> &nbsp;Next steps&nbsp;</h3>
-							<ul>
-								<li>Look for SCRaMbLE-sensitive bidirectional promoters/antisense transcripts in Zhenyu's data</li>
-								<li class="fragment">Choose 2 SCRaMbLE strains for TIF-Seq (4 total strains for first TIF-Seq run)</li>
-								<li class="fragment">Delay selection of condition. Run first in standard YPD conditions.</li>
-							</ul>
-					</section>
-					<section id="slide48">
-							<h3>Are there entirely new transcriptional features in a SCRaMbLEd genome?</h3>
-							<img width="100%" src="src/scramble_slide-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					<section id="slide30">
+							<h3 ><b>HERMES</b>: <u>H</u>asenting <u>E</u>volution with <u>R</u>ecurrent <u>M</u>ulitipleed <u>E</u>ngineering with <u>S</u>CRaMbLE-in</h3>
+							<img width="98%" src="src/fig1_bold_simplevar-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
 					</section>
 					<section
 						data-background-color="black",
 						data-background-video="http://scalefreegan.github.io/back2future.mp4"
-						id="slide49">
+						id="slide31">
 					</section>
 				</section>
 				<section id="thanks"
-					data-background="src/thankyou.png"
+					data-background="src/2017_Credits.001.jpeg"
 					data-background-size="contain">
 				</section>
 			</div>
