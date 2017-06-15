@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>IESY 17.06.2017</title>
+
+		<meta name="description" content="IESY 17.06.2017<">
+		<meta name="author" content="Aaron Brooks">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/embl.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<style>
+		.rotate {
+	    -webkit-transform: rotate(25deg);
+	    -moz-transform: rotate(25deg);
+	    -o-transform: rotate(25deg);
+	    -ms-transform: rotate(25deg);
+	    transform: rotate(25deg);
+		}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-color="#2A292D" id="slide1">
+					<h2 style="color:white">Transcription in a <b><span
+						style="color:#9932CC">S</span><span
+						style="color:#4169E1">C</span><span
+						style="color:#3CB371">R</span></b>a<b><span
+						style="color:#FFFF33">M</span></b>b<b><span
+						style="color:#FF8C00">L</span><span
+						style="color:#FF0000">E</span></b>d genome</h2>
+					<p style="color:white">
+ 						<a href="http://aaronbrooks.info">Aaron Brooks</a> /
+						<img height=40 align="middle"
+							style="background:0px;margin:0px 5px 5px 5px;border:0;box-shadow:0;vertical-align:middle"
+							data-src="src/TwitterLogo_white.png"><a href="http://twitter.com/scalefreegan">@scalefreegan</a>
+					</p>
+					<p style="color:white">Steinmetz and Stegle Groups, EMBL Heidelberg</p>
+					<p style="color:white">
+						<small>Follow along on  <img height=40 align="middle" style="background:0px;margin:0px 5px 5px 5px;border:0;box-shadow:0;vertical-align:middle" data-src="src/GitHub-Mark/PNG/GitHub-Mark-Light-64px.png"></small>
+						<br>
+						<small><a href="http://bit.ly/2qNwvGb">bit.ly/2qNwvGb</a></small>
+					</p>
+				</section>
+				<section id="talk">
+					<section
+						data-background="src/genome-yeast-846x410-01.png"
+						data-background-size="contain"
+						data-background-color="#2A292D"
+						id="slide1">
+						<h3 style="color:#EEE;background-color:#007C80;border-radius: 15px;"> &nbsp;Why are genomes organized as we observe them?&nbsp; </h3>
+					</section>
+					<section id="slide2">
+							<h3 >Transcription is linked to genome architecture</h3>
+							<img width="75%" src="src/TIFSeq-1024x650.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://pelechanolab.com/">Pelechano Lab</a>
+							</small></p>
+					</section>
+					<section id="slide3">
+							<h3>How is the transcriptional landscape modified by genome SCRaMbLEing?</h3>
+							<img width="100%" src="src/scramble_slide-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide4">
+							<h4 >Extensive heterogeneity among SCRaMbLE strains</h4>
+							<img width="60%" src="src/scramble.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://genome.cshlp.org/content/26/1/36.long">Shen et al. 2016</a>
+							</small></p>
+					</section>
+					<section id="slide5">
+							<h3 >Multiple solutions for interesting SynIXR SCRaMbLE strains</h3>
+							<img width="100%" src="src/strains-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide6">
+							<h4>Near complete assembly of SCRaMbLE genomes with long-reads</h4>
+							<img width="80%" src="src/longread_solve-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide7">
+							<h4 >Variable difficulty of <i>de novo</i> assembly for SynIXR SCRaMbLEs</h4>
+							<img width="60%" src="src/canuVabruijn-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								Fixed mean read length = 3.98 kb
+							</small></p>
+					</section>
+					<section id="slide8">
+							<h4 >Cas9-assisted <i>de novo</i> assembly</h4>
+							<img width="100%" src="src/catch-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://biorxiv.org/content/early/2017/03/01/110163">Gabrieli et al. 2017 <i>bioRxiv</i></a>
+							</small></p>
+					</section>
+					<section id="slide9">
+							<ul>
+								<li>
+									SynIXR SCRaMbLEd genomes can be assembled <i>de novo</i> from long reads
+								<br>
+								<li class="fragment" style="color:black">
+									Each assembly may require different strategy
+								<br>
+								<li class="fragment" style="color:black">
+									Tools to finish assemblies, e.g. targeted sequencing. <b>Cheap</b>. <b>Scalable</b>.
+							</ul>
+					</section>
+					<section
+						data-background="src/genome-yeast-846x410-01.png"
+						data-background-size="contain"
+						data-background-color="#2A292D"
+						id="slide9">
+						<h3 style="color:#EEE;background-color:#007C80;border-radius: 15px;"> &nbsp;How is the transcriptional landscape modified by genome SCRaMbLEing?&nbsp; </h3>
+						<img width="15%" src="src/andreas-01.jpg" style="float:right;box-shadow:0 0 0;margin:0 10px">
+						<span style="color:#FFF;background-color:#2A292D;position:absolute;right:20px;bottom:-35px;border-radius: 15px;"> &nbsp;Andreas&nbsp; </span></p>
+					</section>
+					<section id="slide10">
+							<h3 >Sequencing methods to measure changes in the transcriptome</h3>
+							<img width="65%" src="src/rna_seq-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide11">
+							<h3 >Mapping 3'-ends is problematic with short reads</h3>
+							<img width="100%" src="src/seg_multimap-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide12">
+							<img width="20%" class="rotate" src="src/FreshBaked.png" style="position:absolute;right:-100px;top:-10px;box-shadow:0 0 0;border:0px;margin:0 10px;z-index:1;">
+							<h3 >SCRaMbLEd SynIXR 3'-ends vary</h3>
+							<iframe src="http://localhost/~brooks/plots/3prime_var.html" width=800px height=500px></iframe>
+							<p><small>
+								Kernel PCA (Cosine kernel) from 22 segments represented in all strains
+							</small></p>
+					</section>
+					<section id="slide13">
+							<img width="20%" class="rotate" src="src/FreshBaked.png" style="position:absolute;right:-100px;top:-10px;box-shadow:0 0 0;border:0px;margin:0 10px;z-index:1;">
+							<h3 >Native Chr 3'-ends do not vary</h3>
+							<iframe src="http://localhost/~brooks/plots/chrV_3prime_var.html" width=800px height=500px></iframe>
+							<p><small>
+								Kernel PCA (Cosine kernel), ChrV
+							</small></p>
+					</section>
+					<section id="slide14">
+						<ul>
+							<li>
+								Global 3'-end variation on SynIXR SCRaMbLEd chromosomes, but not native chromosomes
+							<br>
+							<li class="fragment" style="color:black">
+								Can't say where, why or how these changes occur...yet
+							<br>
+							<li class="fragment" style="color:black">
+								Full-length isoform sequencing (Iso-Seq) will resolve some mapping ambiguities. <b>14.06 Sequel Data</b>
+							<br>
+							<li class="fragment" style="color:black">
+								Emergence of new ncRNA transcripts from bidirectional promoters?
+						</ul>
+					</section>
+					<section id="thanks"
+						data-background="src/thanks.png"
+						data-background-size="contain">
+					</section>
+			</div>
+		</div>
+		<div id="myLogo" style="position: absolute;
+                        bottom: 25px;
+                        left: 45px;
+                        width: 125px;
+                        height: 75px;">
+		<a href="https://www.embl.de/"><img width="50%" src="src/embl.png"></img></a>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
