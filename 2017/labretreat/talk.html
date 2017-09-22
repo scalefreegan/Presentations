@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Lab retreat 09.2017</title>
+
+		<meta name="description" content="Lab retreat 09.2017<">
+		<meta name="author" content="Aaron Brooks">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/embl.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<style>
+		.rotate {
+	    -webkit-transform: rotate(25deg);
+	    -moz-transform: rotate(25deg);
+	    -o-transform: rotate(25deg);
+	    -ms-transform: rotate(25deg);
+	    transform: rotate(25deg);
+		}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-color="#2A292D" id="slide0">
+					<h2 style="color:white">Assembly of a <b><span
+						style="color:#9932CC">S</span><span
+						style="color:#4169E1">C</span><span
+						style="color:#3CB371">R</span></b>a<b><span
+						style="color:#FFFF33">M</span></b>b<b><span
+						style="color:#FF8C00">L</span><span
+						style="color:#FF0000">E</span></b>d genome</h2>
+					<p style="color:white">
+ 						<a href="http://aaronbrooks.info">Aaron Brooks</a> /
+						<img height=40 align="middle"
+							style="background:0px;margin:0px 5px 5px 5px;border:0;box-shadow:0;vertical-align:middle"
+							data-src="src/TwitterLogo_white.png"><a href="http://twitter.com/scalefreegan">@scalefreegan</a>
+					</p>
+					<p style="color:white">Steinmetz and Stegle Groups, EMBL Heidelberg</p>
+					<p style="color:white">
+						<small>Follow along on  <img height=40 align="middle" style="background:0px;margin:0px 5px 5px 5px;border:0;box-shadow:0;vertical-align:middle" data-src="src/GitHub-Mark/PNG/GitHub-Mark-Light-64px.png"></small>
+						<br>
+						<small><a href="http://bit.ly/2qNwvGb">bit.ly/2qNwvGb</a></small>
+					</p>
+				</section>
+				<section id="intro">
+					<section
+						data-background="src/Yeast-Cell.jpg"
+						data-background-size="contain"
+						data-background-color="#2A292D"
+						id="slide1">
+						<h3 style="color:#EEE;background-color:#007C80;border-radius: 15px;"> &nbsp;Why are genomes organized as we observe them?&nbsp; </h3>
+						<!-- <h3 class="fragment" style="color:#EEE;background-color:#007C80;border-radius: 15px;"> &nbsp;What happens when we rearrange them?&nbsp; </h3> -->
+					</section>
+					<section id="slide2">
+							<h3>"A big step towards an artificial yeast genome"</h3>
+							<img width="100%" src="src/20170311_STD001_0.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0"></img>
+							<p><small>
+								<a
+								href="http://www.economist.com/news/science-and-technology/21718479-success-would-usher-true-genetic-engineering-big-step-towards-artificial">
+								Economist, Mar 11th 2017</a>
+							</small></p>
+					</section>
+					<section id="slide3">
+							<h3><i>Gene shuffling</i> with SCRaMbLE</h3>
+							<p><small><u>S</u>ynthetic <u>C</u>hromosome <u>R</u>ecombination <u>a</u>nd <u>M</u>odification <u>b</u>y <u>L</u>oxP-mediated <u>E</u>volution</small></p>
+							<img width="90%" src="src/kbie_a_10919543_f0002.jpeg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://www.tandfonline.com/doi/abs/10.4161/bbug.19543">Dymond and Boeke 2012</a>
+							</small></p>
+					</section>
+				</section>
+				<section id="assembly">
+					<section id="slide4">
+							<h3>Genome assembly is (NP)-hard</h3>
+							<img width="80%" src="src/myers1.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="https://speakerdeck.com/jchin/recent-progress-in-long-read-genome-assembly-theory-practice-and-future-challenges">Jason Chin, Pacific Biosciences.</a>
+							</small></p>
+					</section>
+					<section id="slide5">
+							<img width="100%" src="src/slide_18.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://www.pitt.edu/~super7/45011-46001/45771.ppt">Doug Brutlag</a>
+							</small></p>
+					</section>
+					<section id="slide6" data-background-color="black">
+							<img width="100%" src="src/Slide13.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide7">
+							<img width="100%" src="src/myers2.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+				</section>
+					<!-- <section id="slide9">
+							<h4 >Nanopore sequencing + ultralong reads = reference quality contiguity?</h4>
+							<img width="55%" src="src/ultralong_reads-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://biorxiv.org/content/early/2017/04/20/128835">Jain et al. 2017 <i>bioRxiv</i></a> and
+								<a href="https://genomeinformatics.github.io/cliveome/">Blog post: <i>"Assembling the Cliveome"</i></a>
+							</small></p>
+					</section> -->
+				<section id="scramble">
+					<section id="slide8">
+							<h4 >64 strains derived from SCRaMbLE of SynIXR</h4>
+							<img width="55%" src="src/synixr-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>Each genome segment identified by color and number. ~1 gene per segment. <u>SCRaMbLEgram</u></small></p>
+					</section>
+					<section id="slide9">
+							<h4 >Extensive heterogeneity among SCRaMbLE strains</h4>
+							<img width="60%" src="src/scramble.jpg" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://genome.cshlp.org/content/26/1/36.long">Shen et al. 2016</a>
+							</small></p>
+					</section>
+					<!-- <section id="slide12">
+							<h4 >Workflow for <i>de novo</i> assembly with long-reads</h4>
+							<p><small>Parental strain (JS94) can be solved with single SMRT cell</small></p>
+							<img width="100%" src="src/synixrassembly-01-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section> -->
+					<section id="slide10">
+							<h4>Near complete assembly of SCRaMbLE genomes with long-reads</h4>
+							<p><small>**JS734 could only be solved by aggregating data from several SMRT cells**</small></p>
+							<img width="100%" src="src/unscramble-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide11">
+							<h4 >Variable difficulty of <i>de novo</i> assembly for SynIXR SCRaMbLEs</h4>
+							<img width="60%" src="src/canuVabruijn-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								Fixed mean read length = 3.98 kb
+							</small></p>
+					</section>
+					<section id="slide12">
+							<img width="100%" src="src/crispr_scramble-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide13">
+						<h4>Genome assemblies are graphs</h4>
+							<img width="65%%" src="src/stringgraph.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="https://www.ncbi.nlm.nih.gov/pubmed/16204131">Myers 2005</a>
+							</small></p>
+					</section>
+					<section id="slide14">
+							<img width="100%" src="src/catch-01.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+							<p><small>
+								<a href="http://biorxiv.org/content/early/2017/03/01/110163">Gabrieli et al. 2017 <i>bioRxiv</i></a>
+							</small></p>
+					</section>
+					<section id="slide15">
+						<h4>JS613 is difficult to assemble even with long reads</h4>
+						<img width="75%" src="src/graph_js613_combined.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide16"
+					data-background="src/ab2.jpg"
+					data-background-size="contain"
+					data-background-color="#2A292D">
+					</section>
+					<section id="slide17">
+						<h4>Alignment-based interpretation</h4>
+						<img width="100%" src="src/js613_catch1.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide18">
+						<h4>A single CATCH read is sufficient to complete the assembly</h4>
+						<img width="75%" src="src/js613_complete_combined.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide19">
+						<h4>Catch design is difficult: there are caveats</h4>
+						<img width="100%" src="src/js613_catch2.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+					</section>
+					<section id="slide20">
+							<ol>
+								<li>
+									Specific long reads can complete genome assemblies
+									<ul>
+										<li class="fragment" style="color:black"> obtained by Cas9-approaches
+										<li class="fragment" style="color:black"> esp. handy for repeats
+									</ul>
+								<br>
+								<li class="fragment" style="color:black">
+									<b>Crimp</b>ing is easier than <b>CATCH</b>ing
+									<ul>
+									<li class="fragment" style="color:black">
+										Fewer design issues, multiplex, capture ends
+									</ul>
+								<br>
+								<li class="fragment" style="color:black">
+									We're dev protocols/design tools for Cas9-assisted genome assembly
+									<ul>
+									<li class="fragment" style="color:black">
+										Goal: complete assemblies for 23 SynIXR SCRaMbLE strains
+										<li class="fragment" style="color:black">
+										Looking for challenges in other popular models systems. Ideas?
+									</ul>
+							</ol>
+					</section>
+					<section id="slide21">
+						<h4>Reasonably complete <i>de novo</i> assembly of yeast genome</h4>
+						<img width="85%" src="src/full_assembly.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+						<p><small>>125 average coverage of our PacBio data, JS734. ~5kb mean reads length</small></p>
+					</section>
+					<section id="thanks"
+						data-background="src/2017_Credits.001.jpeg"
+						data-background-size="contain">
+					</section>
+				</section>
+				<section id="crispr-fry">
+					<section>
+						<h4>Got a bunch of guide RNAs to design? FlashFry</h4>
+						<img width="100%" src="src/flashfry.png" style="border:0px;box-shadow:0 0 0;margin:0 0">
+						<p><small><a href="https://github.com/aaronmck/FlashFry">Aaron McKenna, Shendure lab</a></small>
+					</section>
+				</section
+			</div>
+		</div>
+		<div id="myLogo" style="position: absolute;
+                        bottom: 25px;
+                        left: 45px;
+                        width: 125px;
+                        height: 75px;">
+		<a href="https://www.embl.de/"><img width="50%" src="src/embl.png"></img></a>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
